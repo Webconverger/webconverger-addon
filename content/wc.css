@@ -1,0 +1,58 @@
+/*
+ * Edit this file and copy it as userChrome.css into your
+ * profile-directory/chrome/
+ */
+
+/*
+ * Webconverger.com
+ */
+
+/*
+ * Do not remove the @namespace line -- it's required for correct functioning
+ */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+
+/*
+ #PersonalToolbar {
+    display: none;
+    }
+
+ #toolbar-menubar {
+    display: none;
+    }
+*/
+
+ #go-button-stack, .search-go-button-stack {
+display: none !important;}
+
+ #throbber-box {
+   display: none !important;
+ }
+
+
+#content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"] { display: none !important; }
+
+
+/* http://userstyles.org/styles/43 Thanks LouCypher */
+menuitem[disabled="true"] { display: none; }
+
+menuitem[disabled="true"],
+menuitem[disabled="true"] + menuseparator {
+display: none;
+}
+
+#context-sendpage, #context-savepage, #context-bookmarkpage, #PersonalToolbar, #toolbar-menubar { display: none; }
+
+/* Restart icon */
+#restartbrowser-button {
+  list-style-image: url("chrome://webconverger/content/24.png");
+  /*-moz-image-region: rect(0px 24px 24px 0px);*/
+}
+
+toolbar[iconsize="small"] #restartbrowser-button {
+  list-style-image: url("chrome://webconverger/content/16.png");
+  /*-moz-image-region: rect(0px 16px 16px 0px);*/
+}
+
+

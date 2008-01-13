@@ -1,0 +1,3 @@
+content webconverger                                               content/
+overlay chrome://browser/content/browser.xul    chrome://webconverger/content/wc.xul
+style chrome://browser/content/browser.xul chrome://webconverger/content/wc.css

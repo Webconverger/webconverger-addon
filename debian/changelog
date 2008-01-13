@@ -1,0 +1,155 @@
+iceweasel-webconverger (6-21) stable; urgency=low
+
+  * Quit browser when last tab is closed
+
+ -- Kai Hendry <hendry@iki.fi>  Sat, 17 Nov 2007 17:41:11 +0000
+
+iceweasel-webconverger (6-20) stable; urgency=low
+
+  * Missing startup line!
+
+ -- Kai Hendry <hendry@iki.fi>  Sun, 11 Nov 2007 16:05:30 +0000
+
+iceweasel-webconverger (6-19) stable; urgency=low
+
+  * Added restart (quit) button
+  * Fixed toolbaritem with JS (ugly)
+  * goQuitApplication bound to F10
+
+ -- Kai Hendry <hendry@iki.fi>  Sun, 11 Nov 2007 15:27:47 +0000
+
+iceweasel-webconverger (6-18) stable; urgency=low
+
+  * Some silly JS was turning off the navigator-toolbox
+
+ -- Kai Hendry <hendry@iki.fi>  Thu, 26 Jul 2007 11:20:48 +0100
+
+iceweasel-webconverger (6-17) stable; urgency=low
+
+  * Took out navbar defn. It needs to be toggled in
+    /etc/iceweasel/pref/iceweasel.js
+
+ -- Kai Hendry <hendry@iki.fi>  Wed, 25 Jul 2007 17:02:07 +0100
+
+iceweasel-webconverger (6-16) stable; urgency=low
+
+  * Getting rid of some context menu options
+  * Backport
+
+ -- Kai Hendry <hendry@iki.fi>  Thu, 14 Jun 2007 19:21:27 +0100
+
+iceweasel-webconverger (6-15) unstable; urgency=low
+
+  * Re-enabled context menu for spell checking
+
+ -- Kai Hendry <hendry@iki.fi>  Sun, 10 Jun 2007 20:42:36 +0100
+
+iceweasel-webconverger (6-14) unstable; urgency=low
+
+  * Added anon prefs suggestions to "prevent the split screen behaviour when
+    new windows open"
+
+ -- Kai Hendry <hendry@iki.fi>  Sun, 03 Jun 2007 23:30:09 +0100
+
+iceweasel-webconverger (6-13) unstable; urgency=low
+
+  * Hide context menu with css
+
+ -- Kai Hendry <hendry@iki.fi>  Wed, 30 May 2007 20:48:26 +0100
+
+iceweasel-webconverger (6-12) unstable; urgency=low
+
+  * Enabling keys
+
+ -- Kai Hendry <hendry@iki.fi>  Tue, 29 May 2007 19:14:30 +0100
+
+iceweasel-webconverger (6-11) unstable; urgency=low
+
+  * Enabled search now hopefully.
+
+ -- Kai Hendry <hendry@iki.fi>  Tue, 29 May 2007 16:37:06 +0100
+
+iceweasel-webconverger (6-10) unstable; urgency=low
+
+  * /etc/iceweasel in here...
+
+ -- Kai Hendry <hendry@iki.fi>  Tue, 29 May 2007 16:32:46 +0100
+
+iceweasel-webconverger (6-9) unstable; urgency=low
+
+  * Enable search keys
+
+ -- Kai Hendry <hendry@iki.fi>  Tue, 29 May 2007 09:13:18 +0100
+
+iceweasel-webconverger (6-8) unstable; urgency=low
+
+  * Re-enabled text resize
+
+ -- Kai Hendry <hendry@iki.fi>  Mon, 28 May 2007 08:48:31 +0100
+
+iceweasel-webconverger (6-7) unstable; urgency=low
+
+  * Maybe generating a package every time I change something is not a good
+    idea.
+
+ -- Kai Hendry <hendry@iki.fi>  Thu, 24 May 2007 14:06:17 +0100
+
+iceweasel-webconverger (6-6) unstable; urgency=low
+
+  * Open still not working. Try something else.
+
+ -- Kai Hendry <hendry@iki.fi>  Thu, 24 May 2007 14:02:56 +0100
+
+iceweasel-webconverger (6-5) unstable; urgency=low
+
+  * Yikes, fullscreen and open tab bind not working
+
+ -- Kai Hendry <hendry@iki.fi>  Thu, 24 May 2007 14:00:36 +0100
+
+iceweasel-webconverger (6-4) unstable; urgency=low
+
+  * Hopefully re-enabled ctrl-{w,t,l} binds
+
+ -- Kai Hendry <hendry@iki.fi>  Thu, 24 May 2007 13:56:34 +0100
+
+iceweasel-webconverger (6-3) unstable; urgency=low
+
+  * Please get this source package in
+
+ -- Kai Hendry <hendry@iki.fi>  Fri, 30 Mar 2007 12:25:32 +0100
+
+iceweasel-webconverger (6-2) unstable; urgency=low
+
+  * Changed version to reflect svn revision number
+
+ -- Kai Hendry <hendry@iki.fi>  Fri, 30 Mar 2007 11:55:31 +0100
+
+iceweasel-webconverger (20070322-1) unstable; urgency=low
+
+  * Forked rkiosk as upstream is unresponsive and I am hacking this thing to
+    bits
+  * Changing src name
+
+ -- Kai Hendry <hendry@iki.fi>  Thu, 22 Mar 2007 17:30:39 +0000
+
+rkiosk (0.5.1-3) unstable; urgency=low
+
+  * chrome.manifest altered to do away with the .jar
+
+ -- Kai Hendry <hendry@iki.fi>  Mon, 19 Mar 2007 11:45:57 +0000
+
+rkiosk (0.5.1-2) unstable; urgency=low
+
+  * Rolled back JS to original
+
+ -- Kai Hendry <hendry@iki.fi>  Mon, 19 Mar 2007 10:57:14 +0000
+
+rkiosk (0.5.1-1) unstable; urgency=low
+
+  * Initial release.
+  * Lowered the ID case
+  * Failure in chrome registration
+  * chrome.manifest was required!
+  * Manually edited .jar to enable navbar
+
+ -- Kai Hendry <hendry@iki.fi>  Mon, 26 Feb 2007 13:29:09 +0000
