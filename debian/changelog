@@ -1,3 +1,10 @@
+iceweasel-webconverger (6-22) lenny; urgency=low
+
+  * Remove default homepage
+  * Ignore update screens
+
+ -- Kai Hendry <hendry@iki.fi>  Thu, 06 Mar 2008 20:42:39 +0000
+
 iceweasel-webconverger (6-21) stable; urgency=low
 
   * Quit browser when last tab is closed

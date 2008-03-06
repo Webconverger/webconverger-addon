@@ -1,7 +1,6 @@
 /* Webconverger.com
 */
 
-pref("browser.startup.homepage", "http://portal.webconverger.com");
 pref("accessibility.typeaheadfind.flashBar", 0);
 pref("app.update.enabled", false);
 pref("browser.download.dir", "/tmp");
