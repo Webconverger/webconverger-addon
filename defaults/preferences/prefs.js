@@ -10,7 +10,7 @@ pref("browser.download.folderList", 2);
 pref("browser.download.lastDir", "/tmp");
 pref("browser.history_expire_days.mirror", 1);
 pref("browser.preferences.advanced.selectedTabIndex", 2);
-pref("browser.startup.homepage_override.mstone", "rv:1.8.1.3");
+pref("browser.startup.homepage_override.mstone", "ignore");
 pref("browser.startup.page", 3);
 pref("browser.tabs.autoHide", false);
 pref("browser.tabs.closeButtons", 3);
