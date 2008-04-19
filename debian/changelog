@@ -1,3 +1,9 @@
+iceweasel-webconverger (6-23) lenny; urgency=low
+
+  * Updating for Firefox 3
+
+ -- Kai Hendry <hendry@iki.fi>  Sat, 19 Apr 2008 23:55:53 +0100
+
 iceweasel-webconverger (6-22) lenny; urgency=low
 
   * Remove default homepage

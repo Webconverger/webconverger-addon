@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: iceweasel-webconverger
 Architecture: all
-Depends: iceweasel (>= 2.0+dfsg-1), iceweasel (<< 2.1)
+Depends: iceweasel (>= 2.0+dfsg-1), iceweasel (<< 4.0)
 Description: web kiosk extension for the Iceweasel web browser
  Webconverger provides a Firefox 2.0 extension to lock down the browser
  for kiosk browsing.
