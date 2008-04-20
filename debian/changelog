@@ -1,3 +1,9 @@
+iceweasel-webconverger (6-24) lenny; urgency=low
+
+  * Trying to disable new FF3 download manager and star-button
+
+ -- Kai Hendry <hendry@iki.fi>  Sun, 20 Apr 2008 12:41:43 +0100
+
 iceweasel-webconverger (6-23) lenny; urgency=low
 
   * Updating for Firefox 3

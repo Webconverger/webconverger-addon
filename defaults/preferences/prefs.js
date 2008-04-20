@@ -53,8 +53,10 @@ pref("browser.link.open_newwindow.restriction", 0);
 // pref("print.always_print_silent",true);
 // pref("print.show_print_progress",false);
 
-// This should be set at /etc/iceweasel/pref/iceweasel.js
-//pref("rkiosk.navbar", true);
-
-// BETA Spell check all fields
+// Spell check all fields
 pref("layout.spellcheck.default", 2)
+
+// FF3
+pref("browser.sessionstore.enabled", false);
+pref("browser.sessionstore.resume_from_crash", false);
+pref("xpinstall.enabled", false);

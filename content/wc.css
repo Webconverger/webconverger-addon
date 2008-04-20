@@ -1,38 +1,41 @@
 /*
- * Edit this file and copy it as userChrome.css into your
- * profile-directory/chrome/
- */
-
-/*
  * Webconverger.com
- */
-
-/*
+ *
  * Do not remove the @namespace line -- it's required for correct functioning
  */
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
 
+/* Use DOM inspector to try find these all
+ *
+ * It took me about an hour to find #urlbar > .autocomplete-history-dropmarker :(
+ * There is some context menus from right clicking a link that need removing like Send Link.. AND Bookmark This Link
+ *
+ * */
 
-/*
- #PersonalToolbar {
-    display: none;
-    }
-
- #toolbar-menubar {
-    display: none;
-    }
-*/
-
- #go-button-stack, .search-go-button-stack {
-display: none !important;}
-
- #throbber-box {
-   display: none !important;
- }
-
-
-#content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"] { display: none !important; }
-
+#go-button-stack,
+.search-go-button-stack,
+#star-button,
+#throbber-box,
+#downloadManager,
+#menu_openDownloads,
+#downloads-button,
+#download-monitor,
+#context-savelink,
+#context-saveimage,
+#context-savepage,
+#context-saveframe,
+toolbarbutton.bookmark-item,
+menu.bookmark-item,
+#context-openframe,
+#context-openlink,
+#go-button,
+#urlbar > .autocomplete-history-dropmarker,
+#unknownContentType,
+#feed-button,
+#editBookmarkPanel,
+#editBookmarkPanelStarIcon,
+menuitem[command="Browser:SavePage"],
+#content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"] { display: none !important;}
 
 /* http://userstyles.org/styles/43 Thanks LouCypher */
 menuitem[disabled="true"] { display: none; }
