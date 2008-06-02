@@ -1,7 +1,7 @@
 Source: iceweasel-webconverger
-Section: devel
+Section: contrib/web
 Priority: optional
-Maintainer: Kai Hendry <hendry@iki.fi>
+Maintainer: Kai Hendry <hendry@webconverger.com>
 Build-Depends: debhelper (>= 5.0.0)
 Standards-Version: 3.7.2
 
@@ -9,7 +9,7 @@ Package: iceweasel-webconverger
 Architecture: all
 Depends: iceweasel (>= 2.0+dfsg-1), iceweasel (<< 4.0)
 Description: web kiosk extension for the Iceweasel web browser
- Webconverger provides a Firefox 2.0 extension to lock down the browser
+ Webconverger provides a Firefox extension to lock down the browser
  for kiosk browsing.
  .
- Website: http://webconverger.org/
+ Website: http://webconverger.org/kiosk

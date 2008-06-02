@@ -1,5 +1,6 @@
-iceweasel-webconverger (6-24) lenny; urgency=low
+iceweasel-webconverger (6-24) unstable; urgency=low
 
+  * Build for Webconverger unstable
   * Trying to disable new FF3 download manager and star-button
 
  -- Kai Hendry <hendry@iki.fi>  Sun, 20 Apr 2008 12:41:43 +0100
