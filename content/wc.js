@@ -11,6 +11,9 @@ function tabRemoved(event)
 	if ((num == 2) && (! gBrowser.getBrowserAtIndex(1).contentTitle) && event.target.linkedBrowser.contentTitle)
 	{ goQuitApplication(); }
 
+	if ((num == 2) && (! gBrowser.getBrowserAtIndex(0).contentTitle))
+	{ goQuitApplication(); }
+
 }
 
 function webcRestart() {
