@@ -7,55 +7,39 @@
 
 /* Use DOM inspector to try find these all
  *
- * It took me about an hour to find #urlbar > .autocomplete-history-dropmarker :(
- * There is some context menus from right clicking a link that need removing like Send Link.. AND Bookmark This Link
+ * It took me about an hour to find #urlbar > .autocomplete-history-dropmarker
+ * :( There is some context menus from right clicking a link that need removing
+ * like Send Link.. AND Bookmark This Link
  *
  * */
 
-#go-button-stack,
-.search-go-button-stack,
-#star-button,
-#throbber-box,
-#downloadManager,
-#menu_openDownloads,
-#downloads-button,
-#download-monitor,
-#context-savelink,
-#context-saveimage,
-#context-savepage,
-#context-saveframe,
-toolbarbutton.bookmark-item,
-menu.bookmark-item,
+#PersonalToolbar,
+#context-bookmarkpage,
 #context-openframe,
 #context-openlink,
-#go-button,
-#urlbar > .autocomplete-history-dropmarker,
-#unknownContentType,
-#feed-button,
+#context-saveframe,
+#context-saveimage,
+#context-savelink,
+#context-savepage,
+#context-sendpage,
+#download-monitor,
+#downloadManager,
+#downloads-button,
 #editBookmarkPanel,
 #editBookmarkPanelStarIcon,
+#feed-button,
+#go-button,
+#go-button-stack,
+#menu_openDownloads,
+#star-button,
+#throbber-box,
+#toolbar-menubar,
+#unknownContentType,
+#urlbar > .autocomplete-history-dropmarker,
+.search-go-button-stack,
+menu.bookmark-item,
 menuitem[command="Browser:SavePage"],
-#content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"] { display: none !important;}
-
-/* http://userstyles.org/styles/43 Thanks LouCypher */
-menuitem[disabled="true"] { display: none; }
-
+menuitem[disabled="true"] + menuseparator,
 menuitem[disabled="true"],
-menuitem[disabled="true"] + menuseparator {
-display: none;
-}
-
-#context-sendpage, #context-savepage, #context-bookmarkpage, #PersonalToolbar, #toolbar-menubar { display: none; }
-
-/* Restart icon */
-#restartbrowser-button {
-  list-style-image: url("chrome://webconverger/content/24.png");
-  /*-moz-image-region: rect(0px 24px 24px 0px);*/
-}
-
-toolbar[iconsize="small"] #restartbrowser-button {
-  list-style-image: url("chrome://webconverger/content/16.png");
-  /*-moz-image-region: rect(0px 16px 16px 0px);*/
-}
-
-
+toolbarbutton.bookmark-item,
+#content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"] { display: none !important;}
