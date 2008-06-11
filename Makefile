@@ -1,14 +1,14 @@
-SRC = ${shell ls *.css}
-#all:
-#	@for i in ${shell ls *.css} ; do echo $$i.xpi ; \
-#	cp $$i content/wc.css \
-#	zip -r $$i.xpi chrome.manifest content install.rdf defaults ; done
+all: noaddressbar webconverger
 
-all: ${SRC}
-	cp $< content/wc.css
-	zip -r $<.xpi chrome.manifest content install.rdf defaults
+webconverger:
+	cp $@.css content/wc.css
+	zip -r $@.xpi chrome.manifest content install.rdf defaults
+
+noaddressbar:
+	cp $@.css content/wc.css
+	zip -r $@.xpi chrome.manifest content install.rdf defaults
 
 clean:
-	@rm -rf *.xpi
+	rm -rf *.xpi
 
-.PHONY: all clean
+.PHONY: webconverger noaddressbar clean all
