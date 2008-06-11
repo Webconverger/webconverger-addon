@@ -7,8 +7,19 @@ Standards-Version: 3.7.2
 
 Package: iceweasel-webconverger
 Architecture: all
+Conflicts: iceweasel-webcnoaddressbar
 Depends: iceweasel (>= 2.0+dfsg-1), iceweasel (<< 4.0)
 Description: web kiosk extension for the Iceweasel web browser
+ Webconverger provides a Firefox extension to lock down the browser
+ for kiosk browsing.
+ .
+ Website: http://webconverger.org/kiosk
+
+Package: iceweasel-webcnoaddressbar
+Architecture: all
+Conflicts: iceweasel-webconverger
+Depends: iceweasel (>= 2.0+dfsg-1), iceweasel (<< 4.0)
+Description: web kiosk extension (noaddress bar) for Iceweasel 
  Webconverger provides a Firefox extension to lock down the browser
  for kiosk browsing.
  .
