@@ -33,8 +33,9 @@ install: build
 	do \
 		mkdir -p $(TARGETDIR_LC)$$i/usr/lib/iceweasel/extensions/$$i; \
 		install -m 644 $$i/chrome.manifest $(TARGETDIR_LC)$$i/usr/lib/iceweasel/extensions/$$i; \
-		install -m 644 $$i/content $(TARGETDIR_LC)$$i/usr/lib/iceweasel/extensions/$$i; \
-		install -m 644 $$i/defaults $(TARGETDIR_LC)$$i/usr/lib/iceweasel/extensions/$$i; \
+		cp -r $$i/content $(TARGETDIR_LC)$$i/usr/lib/iceweasel/extensions/$$i; \
+		cp -r $$i/defaults $(TARGETDIR_LC)$$i/usr/lib/iceweasel/extensions/$$i; \
+		ln -s $$i $(TARGETDIR_LC)$$i/usr/lib/iceweasel/extensions/{ee11fa88-036b-4661-bb04-d436f86bc06a}; \
 		install -m 644 $$i/install.rdf $(TARGETDIR_LC)$$i/usr/lib/iceweasel/extensions/$$i; \
 	done
 

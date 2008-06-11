@@ -1,3 +1,9 @@
+iceweasel-webconverger (6-26) unstable; urgency=low
+
+  * New packaging style
+
+ -- Kai Hendry <hendry@webconverger.com>  Wed, 11 Jun 2008 22:32:38 +0100
+
 iceweasel-webconverger (6-25) unstable; urgency=low
 
   * Refactored

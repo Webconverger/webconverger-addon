@@ -1,14 +1,14 @@
-all: noaddressbar webconverger
+all: webcnoaddressbar webconverger
 
 webconverger:
 	cp $@.css content/wc.css
 	zip -r $@.xpi chrome.manifest content install.rdf defaults
 
-noaddressbar:
+webcnoaddressbar:
 	cp $@.css content/wc.css
 	zip -r $@.xpi chrome.manifest content install.rdf defaults
 
 clean:
-	rm -rf *.xpi
+	rm -rf *.xpi content/wc.css
 
-.PHONY: webconverger noaddressbar clean all
+.PHONY: webconverger webcnoaddressbar clean all

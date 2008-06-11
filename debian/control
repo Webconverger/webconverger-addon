@@ -3,7 +3,7 @@ Section: contrib/web
 Priority: optional
 Maintainer: Kai Hendry <hendry@webconverger.com>
 Build-Depends: debhelper (>= 5.0.0)
-Standards-Version: 3.7.2
+Standards-Version: 3.8.0
 
 Package: iceweasel-webconverger
 Architecture: all
