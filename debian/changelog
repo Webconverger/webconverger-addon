@@ -1,3 +1,9 @@
+iceweasel-webconverger (6-27) lenny; urgency=low
+
+  * Build for lenny
+
+ -- Kai Hendry <hendry@webconverger.com>  Wed, 11 Jun 2008 23:00:52 +0100
+
 iceweasel-webconverger (6-26) unstable; urgency=low
 
   * New packaging style
