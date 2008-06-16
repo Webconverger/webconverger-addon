@@ -2,4 +2,4 @@ content webconverger                                               content/
 overlay chrome://browser/content/browser.xul    chrome://webconverger/content/wc.xul
 style chrome://browser/content/browser.xul chrome://webconverger/content/wc.css
 override chrome://mozapps/content/downloads/downloads.xul chrome://webconverger/content/downloads.xul
-override chrome://mozapps/downloads/content/unknownContentType.xul chrome://webconverger/content/unknownContentType.xul
+override chrome://mozapps/content/downloads/unknownContentType.xul chrome://webconverger/content/unknownContentType.xul
