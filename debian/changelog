@@ -1,3 +1,9 @@
+iceweasel-webconverger (8) lenny; urgency=low
+
+  * Killed the downloadManager crap
+
+ -- Kai Hendry <hendry@webconverger.com>  Mon, 16 Jun 2008 21:32:03 +0100
+
 iceweasel-webconverger (6-27) lenny; urgency=low
 
   * Build for lenny
