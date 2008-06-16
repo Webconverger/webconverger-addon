@@ -8,6 +8,5 @@
 <window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
         id="downloadManager" windowtype="Download:Manager"
         orient="vertical" title="Downloads" statictitle="Downloads" hidechrome="false"
-        onload="close();" >
-
+        onload="close();">
 </window>
