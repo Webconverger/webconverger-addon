@@ -4,6 +4,8 @@
 pref("accessibility.typeaheadfind.flashBar", 0);
 pref("app.update.enabled", false);
 pref("browser.download.dir", "/tmp");
+pref("browser.download.manager.useWindow", false);
+pref("browser.download.show_plugins_in_list", false);
 pref("browser.download.downloadDir", "/tmp");
 pref("browser.download.folderList", 2);
 pref("browser.download.lastDir", "/tmp");
