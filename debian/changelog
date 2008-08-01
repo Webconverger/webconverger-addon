@@ -1,3 +1,9 @@
+iceweasel-webconverger (9) lenny; urgency=low
+
+  * Merged in yourlibrary.ca CSS
+
+ -- Kai Hendry <hendry@webconverger.com>  Fri, 01 Aug 2008 18:44:03 +0100
+
 iceweasel-webconverger (8) lenny; urgency=low
 
   * Killed the downloadManager crap

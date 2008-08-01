@@ -1,4 +1,4 @@
-SRC = webcnoaddressbar webconverger
+SRC = webcnoaddressbar webconverger webcnotabs
 
 all: ${SRC}
 
@@ -7,6 +7,6 @@ ${SRC}:
 	zip -r $@.xpi chrome.manifest content install.rdf defaults
 
 clean:
-	rm -rf webcnoaddressbar.xpi webconverger.xpi content/wc.css
+	rm -rf *.xpi content/wc.css
 
 .PHONY: clean all
