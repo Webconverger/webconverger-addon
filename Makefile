@@ -1,11 +1,11 @@
-SRC = webcnoaddressbar webconverger webctabkiller yourlibrary
+SRC = webcnoaddressbar webconverger webctabkiller webcyourlibrary
 
 all: ${SRC}
 
 ${SRC}:
-	cp $@.css content/wc.css
-	cp $@.xul content/wc.xul
-	cp $@.js content/wc.js
+	cp src/$@.css content/wc.css
+	cp src/$@.xul content/wc.xul
+	cp src/$@.js content/wc.js
 	zip -r $@.xpi chrome.manifest content install.rdf defaults
 
 clean:
