@@ -1,3 +1,9 @@
+iceweasel-webconverger (10) lenny; urgency=low
+
+  * Tested and fixed webc to really have no tabs :)
+
+ -- Kai Hendry <hendry@webconverger.com>  Fri, 01 Aug 2008 20:06:04 +0100
+
 iceweasel-webconverger (9) lenny; urgency=low
 
   * Merged in yourlibrary.ca CSS
