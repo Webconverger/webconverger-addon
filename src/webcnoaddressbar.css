@@ -11,7 +11,7 @@
  * :( There is some context menus from right clicking a link that need removing
  * like Send Link.. AND Bookmark This Link
  *
- * */
+ */
 
 menuitem#context-openlinkintab,
 menuitem[oncommand="gContextMenu.openFrameInTab();"],
@@ -61,5 +61,6 @@ menu.bookmark-item,
 menuitem[command="Browser:SavePage"],
 menuitem[disabled="true"] + menuseparator,
 menuitem[disabled="true"],
+#toolbar-context-menu,
 toolbarbutton.bookmark-item,
 #content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"] { display: none !important;}

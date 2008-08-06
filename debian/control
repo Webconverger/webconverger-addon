@@ -1,9 +1,12 @@
 Source: iceweasel-webconverger
 Section: contrib/web
 Priority: optional
+Homepage: http://webconverger.org/kiosk
 Maintainer: Kai Hendry <hendry@webconverger.com>
 Build-Depends: debhelper (>= 5.0.0)
 Standards-Version: 3.8.0
+Vcs-Browser: http://git.debian.net/?p=dwm.git
+Vcs-Git: git://git.debian.net/git/dwm.git
 
 Package: iceweasel-webconverger
 Architecture: all

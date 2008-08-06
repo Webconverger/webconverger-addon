@@ -17,7 +17,7 @@
 
   <commandset id="mainCommandSet">
     <command id="cmd_newNavigator" disabled="true"/>
-    <command id="cmd_bm_open" disabled="false"/>
+    <command id="cmd_bm_open" disabled="true"/>
     <command id="cmd_bm_openinnewwindow" disabled="true"/>
     <command id="cmd_bm_openinnewtab" disabled="true"/>
     <command id="cmd_bm_openfolder" disabled="true"/>
@@ -73,7 +73,7 @@
     <command id="cmd_textZoomReduce" disabled="false"/>
     <command id="cmd_textZoomEnlarge" disabled="false"/>
     <command id="cmd_textZoomReset" disabled="false"/>
-    <command id="Browser:OpenLocation" disabled="false"/>
+    <command id="Browser:OpenLocation" disabled="true"/>
     <command id="Tools:Search" disabled="true"/>
     <command id="Tools:Downloads" disabled="true"/>
     <command id="Download:Manager" disabled="true"/>
