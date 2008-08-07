@@ -11,4 +11,7 @@ ${SRC}:
 clean:
 	rm -rf *.xpi content/wc.css content/wc.xul content/wc.js
 
+upload:
+	scp *.xpi webconverger.com:webconverger.com/xpis/
+
 .PHONY: clean all

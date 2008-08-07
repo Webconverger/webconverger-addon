@@ -5,8 +5,8 @@ Homepage: http://webconverger.org/kiosk
 Maintainer: Kai Hendry <hendry@webconverger.com>
 Build-Depends: debhelper (>= 5.0.0)
 Standards-Version: 3.8.0
-Vcs-Browser: http://git.debian.net/?p=dwm.git
-Vcs-Git: git://git.debian.net/git/dwm.git
+Vcs-Browser: http://git.webconverger.org/?p=iceweasel-webconverger.git
+Vcs-Git: git://webconverger.org/git/iceweasel-webconverger.git
 
 Package: iceweasel-webconverger
 Architecture: all
@@ -16,7 +16,6 @@ Description: web kiosk extension for the Iceweasel web browser
  Webconverger provides a Firefox extension to lock down the browser
  for kiosk browsing.
  .
- Website: http://webconverger.org/kiosk
 
 Package: iceweasel-webcnoaddressbar
 Architecture: all
@@ -26,7 +25,6 @@ Description: web kiosk extension (noaddress bar) for Iceweasel
  Webconverger provides a Firefox extension to lock down the browser
  for kiosk browsing.
  .
- Website: http://webconverger.org/kiosk
 
 Package: iceweasel-webctabkiller
 Architecture: all
@@ -37,7 +35,6 @@ Description: web kiosk extension (no TABS bar) for Iceweasel
  for kiosk browsing. This extension was sponsored to meet the
  requirements of http://www.yourlibrary.ca/
  .
- Website: http://webconverger.org/kiosk
 
 Package: iceweasel-webcyourlibrary
 Architecture: all
@@ -48,4 +45,3 @@ Description: web kiosk extension (no TABS bar or addressbar) for Iceweasel
  for kiosk browsing. This extension was sponsored to meet the
  requirements of http://www.yourlibrary.ca/
  .
- Website: http://webconverger.org/kiosk

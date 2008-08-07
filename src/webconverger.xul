@@ -58,7 +58,7 @@
     <command id="cmd_switchTextDirection" disabled="false"/>
     <command id="View:PageSource" disabled="true"/>
     <command id="View:PageInfo" disabled="true"/>
-    <command id="View:FullScreen" disabled="false"/>
+    <command id="View:FullScreen" disabled="true"/>
     <command id="cmd_find" disabled="true"/>
     <command id="cmd_findAgain" disabled="true"/>
     <command id="cmd_findPrevious" disabled="true"/>
@@ -106,7 +106,7 @@
     <key id="goBackKb" disabled="true"/>
     <key id="goForwardKb" disabled="true"/>
     <key id="goHome" keycode="VK_HOME" command="Browser:Home" modifiers="alt"/>
-    <key id="key_fullScreen" disabled="false"/>
+    <key id="key_fullScreen" disabled="true"/>
     <key id="key_viewSource" disabled="true"/>
     <key id="key_find" disabled="true"/>
     <key id="key_findAgain" disabled="true"/>

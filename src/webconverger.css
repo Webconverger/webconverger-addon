@@ -3,17 +3,13 @@
  *
  * Do not remove the @namespace line -- it's required for correct functioning
  */
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* Use DOM inspector to try find these all
- *
- * It took me about an hour to find #urlbar > .autocomplete-history-dropmarker
- * :( There is some context menus from right clicking a link that need removing
- * like Send Link.. AND Bookmark This Link
- *
- */
+/* DISABLE ALL CONTEXT (RIGHT-CLICK MENUS)
+#contentAreaContextMenu,
+*/
 
-#PersonalToolbar,
+#content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"],
 #context-bookmarkpage,
 #context-openframe,
 #context-openlink,
@@ -22,29 +18,25 @@
 #context-savelink,
 #context-savepage,
 #context-sendpage,
-#download-monitor,
 #downloadManager,
-#downloadManagerOverlay,
+#download-monitor,
 #downloads-button,
-#context-viewsource,
-#context-bookmarkpage,
-#context-bookmarklink,
 #editBookmarkPanel,
 #editBookmarkPanelStarIcon,
 #feed-button,
 #go-button,
 #go-button-stack,
-#menu_openDownloads,
-#star-button,
-#throbber-box,
-#toolbar-menubar,
-#unknownContentType,
-#urlbar > .autocomplete-history-dropmarker,
-.search-go-button-stack,
 menu.bookmark-item,
 menuitem[command="Browser:SavePage"],
-menuitem[disabled="true"] + menuseparator,
 menuitem[disabled="true"],
-#toolbar-context-menu,
+menuitem[disabled="true"] + menuseparator,
+#menu_openDownloads,
+#PersonalToolbar,
+.search-go-button-stack,
+#star-button,
+#throbber-box,
 toolbarbutton.bookmark-item,
-#content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"] { display: none !important;}
+#toolbar-context-menu,
+#toolbar-menubar,
+#unknownContentType,
+#urlbar > .autocomplete-history-dropmarker { display: none !important;}
