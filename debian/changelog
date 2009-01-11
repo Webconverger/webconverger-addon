@@ -1,3 +1,9 @@
+iceweasel-webconverger (12) lenny; urgency=low
+
+  * Re-introduced webcfullscreen
+
+ -- Kai Hendry <hendry@webconverger.com>  Sun, 11 Jan 2009 19:18:03 +0000
+
 iceweasel-webconverger (11) lenny; urgency=low
 
   * Tab killer added :-)

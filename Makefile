@@ -1,4 +1,4 @@
-SRC = webcnoaddressbar webconverger webctabkiller webcyourlibrary
+SRC = webcnoaddressbar webconverger webcfullscreen
 
 all: ${SRC}
 

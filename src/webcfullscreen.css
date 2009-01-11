@@ -1,8 +1,12 @@
 /*
+ * Webconverger.com
+ *
  * Do not remove the @namespace line -- it's required for correct functioning
  */
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
 
+arrowscrollbox,
+#content > tabbox > .tabbrowser-strip,
 #content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"],
 #context-back,
 #context-bookmarkframe,
@@ -47,6 +51,8 @@
 #feed-button,
 #go-button,
 #go-button-stack,
+#go-button-stack,
+#main-menubar,
 menu.bookmark-item,
 menuitem[cmd="bm_openinnewtab"],
 menuitem[command="Browser:SavePage"],
@@ -62,20 +68,25 @@ menuitem#openintabs-menuitem,
 #menu_openDownloads,
 menuseparator.openintabs-menuseparator,
 menuseparator#openintabs-menuseparator,
+#menu_ToolsPopup,
+#menu_viewPopup,
+#navigator-toolbox,
 #PersonalToolbar,
+scrollbar,
+scrollbarbutton,
+scrollbox,
+scrollcorner,
 #searchbar,
 #search-container,
 .search-go-button-stack,
-.search-go-button-stack,
+slider,
 #star-button,
-#tabbox,
-#tabbrowser,
-.tabbrowser-strip,
+#status-bar,
 #throbber-box,
-#throbber-box,
+thumb,
 toolbarbutton.bookmark-item,
 #toolbar-context-menu,
 #toolbar-menubar,
 #unknownContentType,
 #urlbar,
-#urlbar > .autocomplete-history-dropmarker { display: none !important; }
+#urlbar > .autocomplete-history-dropmarker { display: none !important;}
