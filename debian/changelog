@@ -1,3 +1,10 @@
+iceweasel-webconverger (13) lenny; urgency=low
+
+  * Disabled XPI install and about:config
+  * Reformatted some code
+
+ -- Kai Hendry <hendry@webconverger.com>  Sat, 17 Jan 2009 17:39:14 +0000
+
 iceweasel-webconverger (12) lenny; urgency=low
 
   * Re-introduced webcfullscreen

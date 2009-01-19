@@ -83,7 +83,9 @@
   </commandset>
 
   <keyset id="mainKeyset">
+
     <key id="restart" keycode="VK_F10" oncommand="goQuitApplication();"/>
+
     <key id="key_newNavigator" disabled="true"/>
     <key id="key_newNavigatorTab" disabled="false"/>
     <key id="focusURLBar" disabled="false"/>
@@ -120,9 +122,9 @@
     <key id="key_switchTextDirection" disabled="true"/>
     <key id="key_sanitize" disabled="true"/>
     <key id="key_undoCloseTab" disabled="false"/>
-    <key id="key_gotoHistory" command="Rkiosk_donothing();"/>
-    <key id="viewBookmarksSidebarKb" command="Rkiosk_donothing();"/>
-    <key id="viewBookmarksSidebarWinKb" command="Rkiosk_donothing();"/>
+    <key id="key_gotoHistory" command="doNothing();"/>
+    <key id="viewBookmarksSidebarKb" command="doNothing();"/>
+    <key id="viewBookmarksSidebarWinKb" command="doNothing();"/>
   </keyset>
 
 </overlay>
