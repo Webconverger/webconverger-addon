@@ -1,3 +1,9 @@
+iceweasel-webconverger (14) lenny; urgency=low
+
+  * Re-enable printing
+
+ -- Kai Hendry <hendry@webconverger.com>  Thu, 19 Feb 2009 21:03:11 +0000
+
 iceweasel-webconverger (13) lenny; urgency=low
 
   * Disabled XPI install and about:config

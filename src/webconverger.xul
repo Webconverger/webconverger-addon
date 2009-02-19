@@ -39,8 +39,6 @@
     <command id="Browser:SaveFrame" disabled="true"/>
     <command id="Browser:SendLink" disabled="true"/>
     <command id="cmd_pageSetup" disabled="true"/>
-    <command id="cmd_print" oncommand="PrintUtils.print();"/>
-    <command id="cmd_printPreview" disabled="true"/>
     <command id="cmd_close" disabled="false"/>
     <command id="cmd_closeWindow" disabled="false"/>
     <command id="cmd_toggleTaskbar" disabled="true"/>
@@ -95,7 +93,6 @@
     <key id="key_openDownloads" disabled="true"/>
     <key id="openFileKb" disabled="true"/>
     <key id="key_savePage" disabled="true"/>
-    <key id="printKb" disabled="true"/>
     <key id="key_close" disabled="false"/>
     <key id="key_closeWindow" disabled="false"/>
     <key id="key_undo" disabled="true"/>

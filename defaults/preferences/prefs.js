@@ -51,10 +51,6 @@ pref("browser.link.open_newwindow", 3);
 pref("browser.link.open_external",3);
 pref("browser.link.open_newwindow.restriction", 0);
 
-// COMMENT OUT to disable print dialog
-// pref("print.always_print_silent",true);
-// pref("print.show_print_progress",false);
-
 // Spell check all fields
 pref("layout.spellcheck.default", 2)
 
