@@ -1,3 +1,9 @@
+iceweasel-webconverger (16) lenny; urgency=low
+
+  * Disabled file protocol
+
+ -- Kai Hendry <hendry@webconverger.com>  Sun, 19 Apr 2009 21:26:37 +0100
+
 iceweasel-webconverger (15) lenny; urgency=low
 
   * webcfullscreen.xul has it's own file with almost everything disabled

@@ -26,3 +26,12 @@ function webcRestart() {
 	BrowserStartup();
 
 }
+
+function BrowserLoadURL(aTriggeringEvent, aPostData) {
+	var url = gURLBar.value;
+	if (url.match(/^file:/) || url.match(/^\//) || url.match(/^resource:/) || url.match(/^about:/))
+	{
+		alert("Access to this protocol has been disabled!");
+		return;
+	}
+}
