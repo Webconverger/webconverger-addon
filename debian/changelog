@@ -1,3 +1,9 @@
+iceweasel-webconverger (17) lenny; urgency=low
+
+  * Fix return event on the URL bar
+
+ -- Kai Hendry <hendry@webconverger.com>  Mon, 20 Apr 2009 20:16:36 +0100
+
 iceweasel-webconverger (16) lenny; urgency=low
 
   * Disabled file protocol

@@ -28,10 +28,34 @@ function webcRestart() {
 }
 
 function BrowserLoadURL(aTriggeringEvent, aPostData) {
-	var url = gURLBar.value;
-	if (url.match(/^file:/) || url.match(/^\//) || url.match(/^resource:/) || url.match(/^about:/))
-	{
-		alert("Access to this protocol has been disabled!");
-		return;
-	}
+  var url = gURLBar.value;
+
+  if (url.match(/^file:/) || url.match(/^\//) || url.match(/^resource:/) || url.match(/^about:/)) {
+	alert("Access to this protocol has been disabled!");
+  }
+
+
+  if (aTriggeringEvent instanceof MouseEvent) {
+    if (aTriggeringEvent.button == 2)
+      return; // Do nothing for right clicks
+
+    // We have a mouse event (from the go button), so use the standard
+    // UI link behaviors
+    openUILink(url, aTriggeringEvent, false, false,
+               true /* allow third party fixup */, aPostData);
+    return;
+  }
+
+  if (aTriggeringEvent && aTriggeringEvent.altKey) {
+    handleURLBarRevert();
+    content.focus();
+    gBrowser.loadOneTab(url, null, null, aPostData, false,
+                        true /* allow third party fixup */);
+    aTriggeringEvent.preventDefault();
+    aTriggeringEvent.stopPropagation();
+  }
+  else
+    loadURI(url, null, aPostData, true /* allow third party fixup */);
+
+  focusElement(content);
 }
