@@ -7,7 +7,7 @@ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
 		<em:id>{ee11fa88-036b-4661-bb04-d436f86bc06a}</em:id>
 		<em:name>Webconverger</em:name>
-		<em:version>17</em:version>
+		<em:version>18</em:version>
 		<em:description>Webconverger's kiosk extension</em:description>
         <em:type>2</em:type> <!-- type=extension --> 
 		<em:creator>Kai Hendry</em:creator>
