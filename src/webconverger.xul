@@ -2,14 +2,10 @@
 
 <overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-<window id="main-window"
-        onload="webcRestart();">
-</window>
-
 <window id="downloadManager" hidden="true" disabled="true">
 </window>
 
-<script type="application/x-javascript" src="wc.js"/>
+<script src="wc.js"/>
 
         <menubar id="main-menubar" hidden="true"  fullscreentoolbar="false" disabled="true">
               <menuitem id="menu_preferences" disabled="true"/>
