@@ -18,6 +18,8 @@ if (typeof webc == 'undefined') {
 	// Add close tab listener, gBrowser has not been initiated by this point
 	getBrowser().tabContainer.addEventListener("TabClose", tabRemoved, false);
 	getBrowser().tabContainer.addEventListener("DisableDownload", onDownloadStateChange, false);
+	var pbs = Components.classes["@mozilla.org/privatebrowsing;1"].getService(Components.interfaces.nsIPrivateBrowsingService);
+	pbs.privateBrowsingEnabled = true;
 }
 
 webc.init = init();
@@ -55,6 +57,3 @@ function BrowserLoadURL(aTriggeringEvent, aPostData) { // override browser.js
 
 	focusElement(content);
 }
-
-// window.addEventListener("load", webc.init(), false);
-// window.addEventListener("load", downloadStatus.onLoad, false);
