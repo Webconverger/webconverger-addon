@@ -4,7 +4,7 @@ Priority: optional
 Homepage: http://webconverger.org/kiosk
 Maintainer: Kai Hendry <hendry@webconverger.com>
 Build-Depends: debhelper (>= 5.0.0)
-Standards-Version: 3.8.0
+Standards-Version: 3.8.3
 Vcs-Browser: http://git.webconverger.org/?p=iceweasel-webconverger.git
 Vcs-Git: git://webconverger.org/git/iceweasel-webconverger.git
 

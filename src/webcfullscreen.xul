@@ -2,17 +2,14 @@
 
 <overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-<window id="main-window"
-</window>
-
 <window id="downloadManager" hidden="true" disabled="true">
 </window>
 
 <script src="wc.js"/>
 
-        <menubar id="main-menubar" hidden="true"  fullscreentoolbar="false" disabled="true">
-              <menuitem id="menu_preferences" disabled="true"/>
-        </menubar>
+<menubar id="main-menubar" hidden="true"  fullscreentoolbar="false" disabled="true">
+<menuitem id="menu_preferences" disabled="true"/>
+</menubar>
 
   <commandset id="mainCommandSet">
     <command id="cmd_newNavigator" disabled="true"/>

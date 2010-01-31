@@ -1,3 +1,16 @@
+iceweasel-webconverger (22) lenny; urgency=low
+
+  * Fix corrupted fullscreen xul
+
+ -- Kai Hendry <hendry@webconverger.com>  Sun, 31 Jan 2010 13:17:53 +0000
+
+iceweasel-webconverger (21) lenny; urgency=low
+
+  * Fixed a security bug where users could escape the noaddressbar feature to
+    browser any site by selecting text
+
+ -- Kai Hendry <hendry@webconverger.com>  Sun, 31 Jan 2010 11:40:03 +0000
+
 iceweasel-webconverger (20) lenny; urgency=low
 
   * /dev/null test
