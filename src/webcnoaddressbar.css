@@ -6,6 +6,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
 
 #content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"],
+#context-searchselect,
 #context-back,
 #context-bookmarkframe,
 #context-bookmarklink,

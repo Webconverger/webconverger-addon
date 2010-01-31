@@ -7,9 +7,9 @@ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
 		<em:id>{ee11fa88-036b-4661-bb04-d436f86bc06a}</em:id>
 		<em:name>Webconverger</em:name>
-		<em:version>19</em:version>
+		<em:version>21</em:version>
 		<em:description>Webconverger's kiosk extension</em:description>
-        <em:type>2</em:type> <!-- type=extension --> 
+        <em:type>2</em:type> <!-- type=extension -->
 		<em:creator>Kai Hendry</em:creator>
         <em:contributor>Kimmo Heinaaro</em:contributor>
         <em:contributor>Jamie Kitson</em:contributor>
@@ -25,7 +25,7 @@ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 				<em:minVersion>2.0</em:minVersion>
-				<em:maxVersion>3.5.*</em:maxVersion>
+				<em:maxVersion>3.6.*</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 	</Description>

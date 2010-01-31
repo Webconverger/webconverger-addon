@@ -53,6 +53,7 @@ pref("layout.spellcheck.default", 2)
 pref("browser.sessionstore.enabled", false);
 pref("browser.sessionstore.resume_from_crash", false);
 pref("xpinstall.enabled", false);
+pref("privateBrowsingEnabled", true);
 pref("browser.privatebrowsing.autostart", true);
 pref("browser.privatebrowsing.dont_prompt_on_enter", true);
 pref("privacy.sanitize.sanitizeOnShutdown", true);
