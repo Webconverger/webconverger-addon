@@ -1,3 +1,9 @@
+iceweasel-webconverger (24) squeeze; urgency=low
+
+  * Hide image info
+
+ -- Kai Hendry <hendry@webconverger.com>  Sun, 30 Jan 2011 12:42:23 +0100
+
 iceweasel-webconverger (22) lenny; urgency=low
 
   * Fix corrupted fullscreen xul
