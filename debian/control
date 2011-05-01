@@ -11,7 +11,7 @@ Vcs-Git: git://webconverger.org/git/iceweasel-webconverger.git
 Package: iceweasel-webconverger
 Architecture: all
 Conflicts: iceweasel-webcnoaddressbar, iceweasel-webctabkiller, iceweasel-webcfullscreen
-Depends: iceweasel (>= 2.0+dfsg-1), iceweasel (<< 4.0), ${misc:Depends}
+Depends: iceweasel (>= 2.0+dfsg-1), iceweasel, ${misc:Depends}
 Description: Web kiosk extension for the Iceweasel web browser
  Webconverger provides a Firefox extension to lock down the browser
  for kiosk browsing. This is the default kiosk mode for Webconverger.
@@ -20,7 +20,7 @@ Description: Web kiosk extension for the Iceweasel web browser
 Package: iceweasel-webcnoaddressbar
 Architecture: all
 Conflicts: iceweasel-webconverger, iceweasel-webctabkiller, iceweasel-webcfullscreen
-Depends: iceweasel (>= 2.0+dfsg-1), iceweasel (<< 4.0), ${misc:Depends}
+Depends: iceweasel (>= 2.0+dfsg-1), iceweasel, ${misc:Depends}
 Description: Web kiosk extension with no address bar
  Webconverger provides a Firefox extension to lock down the browser for kiosk
  browsing. This mode is for deployments were users are not expected to browse
@@ -30,7 +30,7 @@ Description: Web kiosk extension with no address bar
 Package: iceweasel-webcfullscreen
 Architecture: all
 Conflicts: iceweasel-webconverger, iceweasel-webcnoaddressbar
-Depends: iceweasel (>= 2.0+dfsg-1), iceweasel (<< 4.0), ${misc:Depends}
+Depends: iceweasel (>= 2.0+dfsg-1), iceweasel, ${misc:Depends}
 Description: Web kiosk extension Full screen applications
  Webconverger provides a Firefox extension to lock down the browser for kiosk
  browsing. This full screen mode is great for digital signage.

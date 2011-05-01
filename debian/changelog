@@ -1,3 +1,17 @@
+iceweasel-webconverger (26) squeeze; urgency=low
+
+  * Removed versioned depedency on FF since extension seems to work between
+    versions and Mozilla have announced they are going to use major number
+    more often
+
+ -- Kai Hendry <hendry@webconverger.com>  Mon, 02 May 2011 01:20:51 +0200
+
+iceweasel-webconverger (25) squeeze; urgency=low
+
+  * Tested on FF4
+
+ -- Kai Hendry <hendry@webconverger.com>  Mon, 02 May 2011 01:12:06 +0200
+
 iceweasel-webconverger (24) squeeze; urgency=low
 
   * Hide image info
