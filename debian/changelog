@@ -1,3 +1,9 @@
+iceweasel-webconverger (27) squeeze; urgency=low
+
+  * Bump major version for Firefox 5
+
+ -- Kai Hendry <hendry@webconverger.com>  Thu, 23 Jun 2011 14:38:40 +0000
+
 iceweasel-webconverger (26) squeeze; urgency=low
 
   * Removed versioned depedency on FF since extension seems to work between
