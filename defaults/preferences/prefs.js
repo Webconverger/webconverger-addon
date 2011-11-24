@@ -14,7 +14,6 @@ pref("browser.download.lastDir", "/dev/null");
 pref("browser.history_expire_days.mirror", 1);
 pref("browser.preferences.advanced.selectedTabIndex", 2);
 pref("browser.startup.homepage_override.mstone", "ignore");
-pref("browser.startup.page", 3);
 pref("browser.tabs.autoHide", false);
 pref("browser.tabs.tabMinWidth", 0);
 
