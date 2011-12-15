@@ -1,8 +1,8 @@
 /*
- * Webconverger.com
- *
- * Do not remove the @namespace line -- it's required for correct functioning
- */
+* Webconverger.com
+*
+* Do not remove the @namespace line -- it's required for correct functioning
+*/
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
 
 #content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"],
@@ -71,16 +71,9 @@ menuseparator#openintabs-menuseparator,
 #menu_ToolsPopup,
 #menu_viewPopup,
 #PersonalToolbar,
-#searchbar,
-#search-container,
-.search-go-button-stack,
-.search-go-button-stack,
 #star-button,
-#throbber-box,
-#throbber-box,
 toolbarbutton.bookmark-item,
 #toolbar-context-menu,
 #toolbar-menubar,
 #unknownContentType,
-#urlbar,
-#urlbar > .autocomplete-history-dropmarker { display: none !important;}
+#nav-bar { display: none !important;}
