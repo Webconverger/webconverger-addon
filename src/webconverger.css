@@ -5,10 +5,6 @@
  */
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* DISABLE ALL CONTEXT (RIGHT-CLICK MENUS)
-#contentAreaContextMenu,
-*/
-
 #content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"],
 #context-back,
 #context-bookmarkframe,
@@ -40,8 +36,8 @@
 #context-setDesktopBackground,
 #context-stop,
 #context-viewframeinfo,
-#context-viewimageinfo,
 #context-viewframesource,
+#context-viewimageinfo,
 #context-viewinfo,
 #context-viewpartialsource-mathml,
 #context-viewpartialsource-selection,
