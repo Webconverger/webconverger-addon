@@ -17,9 +17,6 @@ pref("browser.startup.homepage_override.mstone", "ignore");
 pref("browser.tabs.autoHide", false);
 pref("browser.tabs.tabMinWidth", 0);
 
-// Always have a X for people to be able to close the last tab
-pref("browser.tabs.closeButtons", 3);
-
 pref("browser.tabs.warnOnClose", false);
 pref("browser.tabs.warnOnOpen", false);
 pref("browser.urlbar.hideGoButton", true);
@@ -45,10 +42,7 @@ pref("browser.link.open_newwindow", 3);
 pref("browser.link.open_external",3);
 pref("browser.link.open_newwindow.restriction", 0);
 
-// Spell check all fields
-pref("layout.spellcheck.default", 2)
-
-// FF3 http://www.flickr.com/photos/hendry/3680043392/
+// Defence in depth
 pref("browser.sessionstore.enabled", false);
 pref("browser.sessionstore.resume_from_crash", false);
 pref("xpinstall.enabled", false);
