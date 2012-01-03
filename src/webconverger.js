@@ -1,35 +1,37 @@
-if (typeof webc == 'undefined') {
-		(function() {
-		 window.webc = {};
+if (typeof webc == 'undefined') { (function() {
+		window.webc = {};
 
-	function tabRemoved(event) {
+		function tabRemoved(event) {
 
-		// Get number of tabs
-		var num = gBrowser.browsers.length;
+			// Get number of tabs
+			var num = gBrowser.browsers.length;
 
-		// If there are two tabs, the second tab has no title and the closed tab
-		// does have a title (ie is not the same tab) then close the browser
+			// If there are two tabs, the second tab has no title and the closed tab
+			// does have a title (ie is not the same tab) then close the browser
+			if ((num == 2) && (!gBrowser.getBrowserAtIndex(1).contentTitle) && event.target.linkedBrowser.contentTitle) {
+				goQuitApplication();
+			}
+			if ((num == 2) && (!gBrowser.getBrowserAtIndex(0).contentTitle)) {
+				goQuitApplication();
+			}
+		}
 
-		if ((num == 2) && (! gBrowser.getBrowserAtIndex(1).contentTitle) && event.target.linkedBrowser.contentTitle) { goQuitApplication(); }
-		if ((num == 2) && (! gBrowser.getBrowserAtIndex(0).contentTitle)) { goQuitApplication(); }
-	}
+		function init() {
+			// Add close tab listener, gBrowser has not been initiated by this point
+			getBrowser().tabContainer.addEventListener("TabClose", tabRemoved, false);
+			getBrowser().tabContainer.addEventListener("DisableDownload", onDownloadStateChange, false);
+			var pbs = Components.classes["@mozilla.org/privatebrowsing;1"].getService(Components.interfaces.nsIPrivateBrowsingService);
+			pbs.privateBrowsingEnabled = true;
+		}
 
-	function init() {
-	// Add close tab listener, gBrowser has not been initiated by this point
-	getBrowser().tabContainer.addEventListener("TabClose", tabRemoved, false);
-	getBrowser().tabContainer.addEventListener("DisableDownload", onDownloadStateChange, false);
-	var pbs = Components.classes["@mozilla.org/privatebrowsing;1"].getService(Components.interfaces.nsIPrivateBrowsingService);
-	pbs.privateBrowsingEnabled = true;
-}
-
-webc.init = init();
-})();
+		webc.init = init();
+	})();
 }
 
 function BrowserLoadURL(aTriggeringEvent, aPostData) { // override browser.js
-		var url = gURLBar.value;
-		if (url.match(/^file:/) || url.match(/^\//) || url.match(/^resource:/) || url.match(/^about:/)) {
-			alert("Access to this protocol has been disabled!");
+	var url = gURLBar.value;
+	if (url.match(/^file:/) || url.match(/^\//) || url.match(/^resource:/) || url.match(/^about:/)) {
+		alert("Access to this protocol has been disabled!");
 		return;
 	}
 
@@ -39,21 +41,25 @@ function BrowserLoadURL(aTriggeringEvent, aPostData) { // override browser.js
 		}
 
 		// We have a mouse event (from the go button), so use the standard UI link behaviors
-		openUILink(url, aTriggeringEvent, false, false, true /* allow third party fixup */, aPostData);
+		openUILink(url, aTriggeringEvent, false, false, true , aPostData);
 		return;
 	}
 
 	if (aTriggeringEvent && aTriggeringEvent.altKey) {
 		handleURLBarRevert();
 		content.focus();
-		gBrowser.loadOneTab(url, null, null, aPostData, false,
-				true /* allow third party fixup */);
+		gBrowser.loadOneTab(url, null, null, aPostData, false, true
+		/* allow third party fixup */
+		);
 		aTriggeringEvent.preventDefault();
 		aTriggeringEvent.stopPropagation();
 	}
 	else {
-		loadURI(url, null, aPostData, true /* allow third party fixup */);
+		loadURI(url, null, aPostData, true
+		/* allow third party fixup */
+		);
 	}
 
 	focusElement(content);
 }
+
