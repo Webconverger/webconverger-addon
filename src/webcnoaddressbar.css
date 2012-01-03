@@ -65,5 +65,6 @@ toolbarbutton.bookmark-item,
 #toolbar-context-menu,
 #toolbar-menubar,
 #unknownContentType,
-#urlbar-container,
-#urlbar { display: none !important;}
+#urlbar-container { display: none !important;}
+
+#urlbar { visibility: collapse }
