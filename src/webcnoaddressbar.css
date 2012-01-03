@@ -64,7 +64,6 @@ menuitem[disabled="true"] + menuseparator,
 toolbarbutton.bookmark-item,
 #toolbar-context-menu,
 #toolbar-menubar,
-#unknownContentType,
-#urlbar-container { display: none !important;}
+#unknownContentType { display: none !important;}
 
 #urlbar { visibility: collapse }
