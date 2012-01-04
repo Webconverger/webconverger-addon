@@ -1,3 +1,11 @@
+iceweasel-webconverger (29) squeeze; urgency=low
+
+  * Project hosted at https://github.com/kaihendry/iceweasel-webconverger
+  * Many thanks to Mike Kaply & Jamie Kitson
+  * https://bugzilla.mozilla.org/show_bug.cgi?id=711105
+
+ -- Kai Hendry <hendry@webconverger.com>  Wed, 04 Jan 2012 03:45:14 +0000
+
 iceweasel-webconverger (27) squeeze; urgency=low
 
   * Bump major version for Firefox 5
