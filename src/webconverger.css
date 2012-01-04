@@ -5,12 +5,12 @@
  */
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+#apmenu-button,
+#bookmarks-menu-button,
 #content > tabbox > .tabbrowser-strip > menupopup[anonid="tabContextMenu"],
-#context-back,
 #context-bookmarkframe,
 #context-bookmarklink,
 #context-bookmarkpage,
-#context-forward,
 #context-keywordfield,
 #context-metadata,
 #context-openframe,
@@ -56,11 +56,9 @@ menuitem[disabled="true"],
 menuitem[disabled="true"] + menuseparator,
 #menu_openDownloads,
 #PersonalToolbar,
-.search-go-button-stack,
 #star-button,
 #throbber-box,
 toolbarbutton.bookmark-item,
 #toolbar-context-menu,
 #toolbar-menubar,
-#unknownContentType,
-#urlbar > .autocomplete-history-dropmarker { display: none !important;}
+#unknownContentType { display: none !important;}

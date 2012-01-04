@@ -15,12 +15,6 @@
 		<em:contributor>Jamie Kitson</em:contributor>
 		<em:homepageURL>http://webconverger.org/kiosk</em:homepageURL>
 
-		<em:file>
-			<Description about="urn:mozilla:extension:file:webconverger">
-				<em:package>content/</em:package>
-			</Description>
-		</em:file>
-
 		<em:targetApplication>
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
