@@ -1,3 +1,9 @@
+iceweasel-webconverger (30) squeeze; urgency=low
+
+  * Disable draggable tabs
+
+ -- Kai Hendry <hendry@webconverger.com>  Sun, 08 Jan 2012 08:44:30 +0000
+
 iceweasel-webconverger (29) squeeze; urgency=low
 
   * Project hosted at https://github.com/kaihendry/iceweasel-webconverger
