@@ -115,4 +115,6 @@
 
 <tabs id="tabbrowser-tabs" ondragstart="event.preventDefault();event.stopPropagation();"/>
 
+<box id="identity-box" onclick="" onkeypress="" ondragstart=""/>
+
 </overlay>
