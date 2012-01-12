@@ -1,3 +1,9 @@
+iceweasel-webconverger (31) squeeze; urgency=low
+
+  * Stop identity box from showing which can trap users
+
+ -- Kai Hendry <hendry@webconverger.com>  Wed, 11 Jan 2012 03:50:58 +0000
+
 iceweasel-webconverger (30) squeeze; urgency=low
 
   * Disable draggable tabs
