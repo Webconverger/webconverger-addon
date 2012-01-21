@@ -21,15 +21,8 @@ option combined with a homepage set to a [departure
 board](http://traintimes.org.uk/live/PAD) and [noblank](webcfullscreen), would
 provide an adequate solution to inform the travelling public at a station.
 
-# Bugs
-
-Besides the ones mentioned on <http://webconverger.org/kiosk/>
-
-* Disable tab groups (confusing feature)
-* Disable dragging of tabs
-
 ## Mozilla addons
 
 <https://addons.mozilla.org/en-US/firefox/addon/webconverger/> needs to be fixed.
 
-New maintainer ideally needed.
+Full time maintainer ideally needed.

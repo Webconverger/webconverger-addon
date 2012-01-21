@@ -7,7 +7,7 @@ ${SRC}:
 	cp src/$@.xul content/wc.xul
 	cp src/$@.js content/wc.js
 	sed -i 's,<em:name>.*</em:name>,<em:name>$@</em:name>,g' install.rdf
-	zip -r $@.xpi chrome.manifest content install.rdf defaults
+	zip -r $@.xpi chrome.manifest content install.rdf defaults components
 
 clean:
 	rm -rf *.xpi content/wc.css content/wc.xul content/wc.js
