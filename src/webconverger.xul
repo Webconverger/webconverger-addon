@@ -117,4 +117,8 @@
 
 <box id="identity-box" onclick="" onkeypress="" ondragstart=""/>
 
+<menuitem id="menu_tabview" hidden="true"/>
+<menuseparator id="alltabs-popup-separator" hidden="true"/>
+<key id="key_tabview" command=""/>
+
 </overlay>
