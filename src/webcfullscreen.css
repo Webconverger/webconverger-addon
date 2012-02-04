@@ -61,6 +61,7 @@ menuitem[disabled="true"] + menuseparator,
 #throbber-box,
 toolbarbutton.bookmark-item,
 #toolbar-context-menu,
+#statusbar-display,
 #toolbar-menubar,
 #unknownContentType { display: none !important;}
 
