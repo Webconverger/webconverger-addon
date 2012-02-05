@@ -13,3 +13,4 @@ override chrome://mozapps/content/extensions/finalize.xul about:blank
 override chrome://mozapps/content/update/update.xul about:blank
 component {be1472ad-6f60-4dc1-bc62-9145fe220879} components/noHelperAppDlg.js
 contract @mozilla.org/helperapplauncherdialog;1 {be1472ad-6f60-4dc1-bc62-9145fe220879}
+override chrome://global/content/netError.xhtml chrome://webconverger/content/netError.xhtml
