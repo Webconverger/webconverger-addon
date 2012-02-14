@@ -59,3 +59,6 @@ pref("privacy.clearOnShutdown.siteSettings", true);
 pref("privacy.cpd.offlineApps", true);
 pref("privacy.cpd.passwords", true);
 pref("privacy.sanitize.sanitizeOnShutdown", true);
+// Prevent slow script dialogs
+pref("dom.max_chrome_script_run_time", 0);
+pref("dom.max_script_run_time", 0);
