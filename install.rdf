@@ -10,10 +10,11 @@
                em:description="Webconverger's kiosk extension"
                em:type="2"
                em:creator="Kai Hendry"
-               em:contributor="Mike Kaply"
-               em:contributor="Kimmo Heinaar"
-               em:contributor="Jamie Kitson"
                em:homepageURL="http://webconverger.org/kiosk">
+
+    <em:contributor>Mike Kaply</em:contributor>
+    <em:contributor>Kimmo Heinaar</em:contributor>
+    <em:contributor>Jamie Kitson</em:contributor>
 
     <em:targetApplication>
       <Description>
