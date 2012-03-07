@@ -65,3 +65,13 @@ pref("dom.max_script_run_time", 0);
 
 // Disable the popup window that shows up when F7 is pressed
 pref("accessibility.browsewithcaret_shortcut.enabled", false);
+
+// Disable mailto:
+user_pref("network.protocol-handler.expose-all", false);
+user_pref("network.protocol-handler.external-default", false);
+user_pref("network.protocol-handler.external.mailto", false);
+user_pref("network.protocol-handler.external.news", false);
+user_pref("network.protocol-handler.external.nntp", false);
+user_pref("network.protocol-handler.external.snews", false);
+user_pref("network.protocol-handler.warn-external-default", false);
+
