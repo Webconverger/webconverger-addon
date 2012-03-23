@@ -11,6 +11,13 @@ Used in "Enterprise" deployments, schools, libraries, signs, shops and banks!
 
 <http://webconverger.org/kiosk/> shows how it is used in the Webconverger Linux distribution.
 
+# Security
+
+Found a way to circumvent the extension? [Please let us know](http://webconverger.org/security/)!
+
+Many thanks to security researcher and "kiosk hacker" [Paul
+Craig](http://security-assessment.com) for his contributions.
+
 ## Mozilla addons listing
 
 <https://addons.mozilla.org/en-US/firefox/addon/webconverger/>
