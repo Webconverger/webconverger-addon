@@ -3,6 +3,9 @@ overlay chrome://browser/content/browser.xul    chrome://webconverger/content/wc
 style chrome://browser/content/browser.xul chrome://webconverger/content/wc.css
 style chrome://global/content/config.xul chrome://webconverger/content/blank.css
 style about:config chrome://webconverger/content/blank.css
+style chrome://browser/content/safeMode.xul chrome://webconverger/content/blank.css
+style about:addons chrome://webconverger/content/blank.css
+style chrome://mozapps/content/extensions/extensions.xul chrome://webconverger/content/blank.css
 override chrome://mozapps/content/downloads/downloads.xul chrome://webconverger/content/downloads.xul
 override chrome://mozapps/content/downloads/unknownContentType.xul chrome://webconverger/content/unknownContentType.xul
 #override chrome://mozapps/content/xpinstall/xpinstallConfirm.xul about:blank
