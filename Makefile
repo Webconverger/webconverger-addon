@@ -18,6 +18,6 @@ upload:
 	rsync *.xpi webconverger.com:webconverger.com/xpis/
 
 hetty:
-	rsync -art --delete extensions hetty:extensions/
+	rsync -art --delete extensions/ hetty:extensions
 
 .PHONY: clean all upload
