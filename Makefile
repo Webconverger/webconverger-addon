@@ -17,7 +17,7 @@ clean:
 upload:
 	rsync *.xpi webconverger.com:webconverger.com/xpis/
 
-hetty:
-	rsync -art --delete extensions/ hetty:extensions
+deploy:
+	rsync -art --delete extensions/ /home/hendry/debian/sid-root/root/webconverger/chroot/etc/webc/iceweasel/extensions
 
 .PHONY: clean all upload
