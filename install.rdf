@@ -6,7 +6,7 @@
   <Description about="urn:mozilla:install-manifest"
                em:id="{ee11fa88-036b-4661-bb04-d436f86bc06a}"
                em:name="webconverger"
-               em:version="39"
+               em:version="40"
                em:description="Webconverger's kiosk extension"
                em:type="2"
                em:creator="Kai Hendry"
@@ -20,7 +20,7 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>2.0</em:minVersion>
-        <em:maxVersion>10.*</em:maxVersion>
+        <em:maxVersion>14.*</em:maxVersion>
       </Description>
     </em:targetApplication>
   </Description>
