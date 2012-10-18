@@ -8,11 +8,13 @@ ${SRC}:
 	cp src/$@.js content/wc.js
 	@mkdir -p extensions
 	rsync -art chrome.manifest content install.rdf defaults components extensions/$@
+	zip -r $@.xpi chrome.manifest content install.rdf defaults components
+
 clean:
-	rm -rf content/wc.css content/wc.xul content/wc.js
+	rm -rf *.xpi content/wc.css content/wc.xul content/wc.js
 	rm -rf extensions
 
-deploy:
-	rsync -art extensions/ /home/hendry/debian/sid-root/root/webconverger/chroot/etc/webc/extensions
+upload:
+	rsync *.xpi webconverger.com:webconverger.com/xpis/
 
 .PHONY: clean all upload
