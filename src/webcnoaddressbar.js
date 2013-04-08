@@ -15,8 +15,8 @@ function installButton(toolbarId, id) {
 		reloadButton.style.visibility = "visible";
 		var stopButton = document.getElementById("stop-button");
 		stopButton.style.visibility = "visible";
-		// COMMENT BELOW OUT IF showprintbutton not explicity set
-		installButton("nav-bar", "print-button");
+		// COMMENT BELOW OUT only if showprintbutton is explicity set
+		// installButton("nav-bar", "print-button");
 		window.removeEventListener("load", startup, false);
 	}
 

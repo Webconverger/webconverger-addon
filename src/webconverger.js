@@ -11,8 +11,8 @@ var webc = {
 		if (gBrowser) {
 			gBrowser.tabContainer.addEventListener("TabClose", webc.tabRemoved, false);
 		}
-		// COMMENT BELOW OUT IF showprintbutton not explicity set
-		installButton("nav-bar", "print-button");
+		// COMMENT BELOW OUT only if showprintbutton is explicity set
+		// installButton("nav-bar", "print-button");
 	},
 	tabRemoved: function(event) {
 
