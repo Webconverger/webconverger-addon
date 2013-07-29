@@ -45,6 +45,7 @@
 <command id="Tools:WebConsole" disabled="true" oncommand="" />
 <command id="Tools:webconsole" disabled="true" oncommand="" />
 <command id="Tools:console" disabled="true" oncommand="" />
+<command id="Tools:BrowserConsole" disabled="true" oncommand="" />
 <command id="View:FullScreen" disabled="true"/>
 <command id="View:PageInfo" disabled="true"/>
 <command id="View:PageSource" disabled="true"/>
