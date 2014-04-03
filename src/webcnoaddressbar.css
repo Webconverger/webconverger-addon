@@ -94,3 +94,40 @@ toolbarbutton.bookmark-item,
 
 /* webcnoaddressbar */
 #urlbar-container { visibility: collapse }
+
+#nav-bar-customization-target,
+#PanelUI-button,
+#print-button,
+#home-button {
+  display: none;
+}
+
+#wc-back {
+  list-style-image: url("chrome://webconverger/content/Toolbar.png");
+  -moz-image-region: rect(0px, 54px, 18px, 36px);
+}
+
+#wc-forward {
+  list-style-image: url("chrome://webconverger/content/Toolbar.png");
+  -moz-image-region: rect(0px, 72px, 18px, 54px);
+}
+
+#wc-stop {
+  list-style-image: url("chrome://webconverger/content/Toolbar.png");
+  -moz-image-region: rect(0px, 108px, 18px, 90px);
+}
+
+#wc-reload {
+  list-style-image: url("chrome://webconverger/content/Toolbar.png");
+  -moz-image-region: rect(0px, 90px, 18px, 72px);
+}
+
+#wc-print {
+  list-style-image: url("chrome://webconverger/content/Toolbar.png");
+  -moz-image-region: rect(0px, 414px, 18px, 396px);
+}
+
+#wc-home {
+  list-style-image: url("chrome://webconverger/content/Toolbar.png");
+  -moz-image-region: rect(0px, 126px, 18px, 108px);
+}
