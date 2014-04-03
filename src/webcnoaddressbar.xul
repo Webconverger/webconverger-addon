@@ -148,8 +148,8 @@
 </menupopup>
 
     <toolbar id="nav-bar">
-    <toolbarbutton id="wc-back" class="toolbarbutton-1" ordinal="0" command="Browser:Back"/>
-    <toolbarbutton id="wc-forward" class="toolbarbutton-1" ordinal="1" command="Browser:Forward"/>
+    <toolbarbutton id="wc-back" class="toolbarbutton-1" ordinal="0" oncommand="BrowserBack()"/>
+    <toolbarbutton id="wc-forward" class="toolbarbutton-1" ordinal="1" oncommand="BrowserForward()"/>
     <toolbarbutton id="wc-reload" class="toolbarbutton-1" ordinal="2" command="Browser:ReloadOrDuplicate"/>
     <toolbarbutton id="wc-stop" class="toolbarbutton-1" ordinal="3" command="Browser:Stop"/>
     <toolbarbutton id="wc-print" class="toolbarbutton-1" ordinal="3" command="cmd_print"/>
