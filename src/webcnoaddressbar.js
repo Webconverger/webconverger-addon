@@ -1,3 +1,5 @@
+Components.utils.import("resource://gre/modules/Services.jsm");
+
 function installButton(toolbarId, id) {
 	var toolbar = document.getElementById(toolbarId);
 	var before = null;
@@ -15,8 +17,13 @@ function installButton(toolbarId, id) {
 		reloadButton.style.visibility = "visible";
 		var stopButton = document.getElementById("stop-button");
 		stopButton.style.visibility = "visible";
-		// COMMENT BELOW OUT only if showprintbutton is explicity set
-		// installButton("nav-bar", "print-button");
+		var showPrintButton = false;
+		try {
+			showPrintButton = Services.prefs.getBoolPref("extensions.webconverger.showprintbutton");
+		} catch (e) {}
+		if (showPrintButton) {
+			document.getElementById("wc-print").removeAttribute("hidden");
+		}
 		window.removeEventListener("load", startup, false);
 	}
 

@@ -152,7 +152,7 @@
     <toolbarbutton id="wc-forward" class="toolbarbutton-1" ordinal="1" oncommand="BrowserForward()"/>
     <toolbarbutton id="wc-reload" class="toolbarbutton-1" ordinal="2" command="Browser:ReloadOrDuplicate"/>
     <toolbarbutton id="wc-stop" class="toolbarbutton-1" ordinal="3" command="Browser:Stop"/>
-    <toolbarbutton id="wc-print" class="toolbarbutton-1" ordinal="3" command="cmd_print"/>
+    <toolbarbutton id="wc-print" class="toolbarbutton-1" ordinal="3" command="cmd_print" hidden="true"/>
     <toolbarbutton id="wc-home" class="toolbarbutton-1" ordinal="3" oncommand="BrowserGoHome(event)"/>
 </toolbar>
 </overlay>
