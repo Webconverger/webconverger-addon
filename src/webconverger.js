@@ -73,7 +73,9 @@ function BrowserLoadURL(aTriggeringEvent, aPostData) { // override browser.js
 			showPrintButton = Services.prefs.getBoolPref("extensions.webconverger.showprintbutton");
 		} catch (e) {}
 		if (showPrintButton) {
-			document.getElementById("wc-print").removeAttribute("hidden");
+			document.getElementById("print-button").removeAttribute("hidden");
+		} else {
+			document.getElementById("print-button").setAttribute("hidden", "true");
 		}
 		window.removeEventListener("load", startup, false);
 	}
