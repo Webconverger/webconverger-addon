@@ -73,6 +73,10 @@ function BrowserLoadURL(aTriggeringEvent, aPostData) { // override browser.js
 			showPrintButton = Services.prefs.getBoolPref("extensions.webconverger.showprintbutton");
 		} catch (e) {}
 		if (showPrintButton) {
+			navbar = document.getElementById("nav-bar");
+			currentSet = navbar.currentSet;
+			newCurrentSet = currentSet.replace('home-button', 'home-button,print-button');
+			navbar.currentSet = newCurrentSet;
 			document.getElementById("print-button").removeAttribute("hidden");
 		} else {
 			document.getElementById("print-button").setAttribute("hidden", "true");
