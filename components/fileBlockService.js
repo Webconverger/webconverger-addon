@@ -31,7 +31,7 @@ FileBlock.prototype = {
       this.whitelist = whitelist.split(",");
     } catch(e) {}
     try {
-      var blacklist = Services.prefs.getCharPref("extensions.webconverger.whitelist");
+      var blacklist = Services.prefs.getCharPref("extensions.webconverger.blacklist");
       this.blacklist = blacklist.split(",");
     } catch(e) {}
 
