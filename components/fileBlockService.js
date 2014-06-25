@@ -9,30 +9,18 @@ FileBlock.prototype = {
   appDir: null,
   profileDir: null,
   tempDir: null,
-  // Specify which about pages are allowed, such as "home" or "newtab"
-  // "*" means that all about pages are allowed
-  // about:blank, about:neterror and about:certerror are always allowed
-  aboutWhitelist: [],
-  // Specify any schemes/protocols that are not allowed
-  schemeBlacklist: ["view-source", "irc"],
-  chromeBlacklist: ["browser", "mozapps", "marionette", "specialpowers",
-                    "cookie", "branding", "alerts"],
-  // Regex value - Everything on the whitelist is always allowed.
+  // List of domains for the whitelist
   whitelist: [],
-  // Regex value - If site has not been allowed otherwise, it's blocked
-  blacklist: ["digg.com"],
   initialize: function() {
     this.appDir = Services.io.newFileURI(Services.dirsvc.get("CurProcD", Ci.nsIFile)).spec;
-    var profileDir = Services.dirsvc.get("ProfD", Ci.nsILocalFile);
-    this.profileDir = Services.io.newFileURI(profileDir).spec;
+    this.profileDir = Services.io.newFileURI(Services.dirsvc.get("ProfD", Ci.nsIFile)).spec;
     this.tempDir = Services.io.newFileURI(Services.dirsvc.get("TmpD", Ci.nsIFile)).spec;
     try {
       var whitelist = Services.prefs.getCharPref("extensions.webconverger.whitelist");
       this.whitelist = whitelist.split(",");
-    } catch(e) {}
-    try {
-      var blacklist = Services.prefs.getCharPref("extensions.webconverger.blacklist");
-      this.blacklist = blacklist.split(",");
+      for (var i=0; i < whitelist.length; i++) {
+        whitelist[i] = whitelist[i].trim();
+      }
     } catch(e) {}
 
     var whitelistFile = profileDir.clone();
@@ -74,25 +62,24 @@ FileBlock.prototype = {
       return Ci.nsIContentPolicy.ACCEPT;
     }
     // Allow everything on the whitelist first
-    if (this.whitelist.length > 0) {
-      for (var i=0; i < this.whitelist.length; i++) {
-        var regex = new RegExp(this.whitelist[i]);
-        if (regex.test(aContentLocation.spec)) {
+    if (aContentLocation.scheme == "http" ||
+      aContentLocation.scheme == "https") {
+      for (var i=0; i< this.whitelist.length; i++) {
+        if (aContentLocation.host == this.whitelist[i] ||
+            aContentLocation.host.substr(aContentLocation.host.length - this.whitelist[i].length - 1) == "." + this.whitelist[i]) {
           return Ci.nsIContentPolicy.ACCEPT;
         }
       }
     }
-    // Prevent the loading of certain chrome URLs into the main browser window
     if (aContentLocation.scheme == "chrome") {
+      // This prevents loading of chrome files into the browser window
       if (aRequestOrigin &&
           (aRequestOrigin.spec == "chrome://browser/content/browser.xul" ||
           aRequestOrigin.scheme == "moz-nullprincipal")) {
-        for (var i=0; i < this.chromeBlacklist.length; i++) {
-          if (aContentLocation.host == this.chromeBlacklist[i]) {
-            return Ci.nsIContentPolicy.REJECT_REQUEST;
-          }
-        }
+        return Ci.nsIContentPolicy.REJECT_REQUEST;
       }
+      // All chrome requests come through here, so we have to allow them
+      // (Like loading the main browser window for instance)
       return Ci.nsIContentPolicy.ACCEPT;
     }
     // Prevent the loading of resource files into the main browser window
@@ -102,19 +89,14 @@ FileBlock.prototype = {
       }
       return Ci.nsIContentPolicy.ACCEPT;
     }
-    // Only load about URLs that are on the whitelist
+    // Only allow these three about URLs
     if (aContentLocation.scheme == "about") {
-      if ((this.aboutWhitelist.length == 1 &&
-          this.aboutWhitelist[0] == "*") ||
-          /^about:certerror/.test(aContentLocation.spec) ||
+      if (/^about:certerror/.test(aContentLocation.spec) ||
           /^about:neterror/.test(aContentLocation.spec) ||
+//          /^about:srcdoc/.test(aContentLocation.spec) || // Needed for Australis
+//          /^about:customizing/.test(aContentLocation.spec) || // Needed for Australis
           /^about:blank/.test(aContentLocation.spec)) {
         return Ci.nsIContentPolicy.ACCEPT;
-      }
-      for (var i=0; i<this.aboutWhitelist.length; i++) {
-        if (aContentLocation.spec == "about:" + this.aboutWhitelist[i]) {
-          return Ci.nsIContentPolicy.ACCEPT;
-        }
       }
       return Ci.nsIContentPolicy.REJECT_REQUEST;
     }
@@ -122,36 +104,23 @@ FileBlock.prototype = {
     if (aContentLocation.scheme == "data") {
         return Ci.nsIContentPolicy.ACCEPT;
     }
-    // Deny protocols that aren't allowed
-    if (this.schemeBlacklist.length > 0) {
-      for (var i=0; i < this.schemeBlacklist.length; i++) {
-        if (aContentLocation.scheme == this.schemeBlacklist[i]) {
-          return Ci.nsIContentPolicy.REJECT_REQUEST;
-        }
-      }
-    }
-    // Deny everything on the blacklist
-    if (this.blacklist.length > 0) {
-      for (var i=0; i < this.blacklist.length; i++) {
-        var regex = new RegExp(this.blacklist[i]);
-        if (regex.test(aContentLocation.spec))
-          return Ci.nsIContentPolicy.REJECT;
-      }
-    }
-    // Once we've parsed the lists, deny all files
-    // This allows files to be whitelisted
+    // Deny all files
     if (aContentLocation.scheme == "file") {
-        return Ci.nsIContentPolicy.REJECT_REQUEST;
+      return Ci.nsIContentPolicy.REJECT_REQUEST;
     }
+    // Allow view source
+//    if (aContentLocation.scheme == "view-source") {
+//      return Ci.nsIContentPolicy.ACCEPT;
+//    }
     // If we had a whitelist, reject everything else
     if (this.whitelist.length > 0) {
-      return Ci.nsIContentPolicy.REJECT;
+      if (aContentType == Ci.nsIContentPolicy.TYPE_DOCUMENT) {
+//        Services.prompt.alert(null, "Webconverger", "Not allowed"); // BETTER MESSAGE
+
+        return Ci.nsIContentPolicy.REJECT_REQUEST;
+      }
     }
-    // If we had a blacklist, accept everything else
-    if (this.blacklist.length > 0) {
-      return Ci.nsIContentPolicy.ACCEPT;
-    }
-    // If there is no whitelist or blacklist, allow everything (because we denied file URLs)
+    // If there is no whitelist, allow everything (because we denied file URLs)
     return Ci.nsIContentPolicy.ACCEPT;
   },
   shouldProcess: function(aContentType, aContentLocation, aRequestOrigin, aContext, aMimeTypeGuess, aExtra) {
