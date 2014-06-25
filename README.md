@@ -21,3 +21,12 @@ Craig](http://security-assessment.com) for his contributions.
 ## Mozilla addons listing
 
 <https://addons.mozilla.org/en-US/firefox/addon/webconverger/>
+
+# Testing on Archlinux
+
+Copy preferences to `/usr/lib/firefox/browser/defaults/preferences/webc.js`.
+
+# Webconverger preferences
+
+* extensions.webconverger.showprintbutton - boolean
+* extensions.webconverger.whitelist - comma separated domains see https://github.com/Webconverger/webconverger-addon/pull/25

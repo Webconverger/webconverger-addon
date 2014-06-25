@@ -17,4 +17,8 @@ clean:
 deploy:
 	rsync -art extensions/ /home/hendry/debian/sid-root/root/webconverger/chroot/etc/webc/extensions
 
+test: all
+	firefox -CreateProfile default
+	firefox ./webconverger.xpi
+
 .PHONY: clean all upload
