@@ -18,8 +18,8 @@ FileBlock.prototype = {
     try {
       var whitelist = Services.prefs.getCharPref("extensions.webconverger.whitelist");
       this.whitelist = whitelist.split(",");
-      for (var i=0; i < whitelist.length; i++) {
-        whitelist[i] = whitelist[i].trim();
+      for (var i=0; i < this.whitelist.length; i++) {
+        this.whitelist[i] = this.whitelist[i].trim();
       }
     } catch(e) {}
 
@@ -115,8 +115,7 @@ FileBlock.prototype = {
     // If we had a whitelist, reject everything else
     if (this.whitelist.length > 0) {
       if (aContentType == Ci.nsIContentPolicy.TYPE_DOCUMENT) {
-//        Services.prompt.alert(null, "Webconverger", "Not allowed"); // BETTER MESSAGE
-
+        Services.prompt.alert(null, "Webconverger", "Not allowed, whitelist only permits: " + this.whitelist.join(", "));
         return Ci.nsIContentPolicy.REJECT_REQUEST;
       }
     }
