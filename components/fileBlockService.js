@@ -93,6 +93,7 @@ FileBlock.prototype = {
     if (aContentLocation.scheme == "about") {
       if (/^about:certerror/.test(aContentLocation.spec) ||
           /^about:neterror/.test(aContentLocation.spec) ||
+          /^about:/.test(aContentLocation.spec) ||
 //          /^about:srcdoc/.test(aContentLocation.spec) || // Needed for Australis
 //          /^about:customizing/.test(aContentLocation.spec) || // Needed for Australis
           /^about:blank/.test(aContentLocation.spec)) {
