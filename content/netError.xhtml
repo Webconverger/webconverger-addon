@@ -377,9 +377,7 @@
     -->
 <script type="application/javascript">
 initPage();
-setTimeout(function() {
-		location.reload(true);
-		}, 10000); // If and when the Internet fails, lets retry every 10 seconds
+setTimeout(location.reload(), 10000); // If and when the Internet fails, lets retry every 10 seconds
 </script>
 
 </body>

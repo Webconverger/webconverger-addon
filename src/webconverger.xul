@@ -14,6 +14,8 @@
 </menubar>
 
 <commandset id="mainCommandSet">
+<command id="cmd_printPreview" oncommand="PrintUtils.print();"/>
+<command id="cmd_print" oncommand="PrintUtils.print();"/>
 <command id="Browser:AddBookmarkAs" disabled="true"/>
 <command id="Browser:Back" disabled="true"/>
 <command id="Browser:BookmarkAllTabs" disabled="true"/>
