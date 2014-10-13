@@ -5,9 +5,13 @@
 		navigatorToolbox.iconsize = "small";
 		navigatorToolbox.setAttribute("iconsize", "small");
 		var reloadButton = document.getElementById("reload-button");
-		reloadButton.style.visibility = "visible";
+		if (reloadButton) {
+			reloadButton.style.visibility = "visible";
+		}
 		var stopButton = document.getElementById("stop-button");
-		stopButton.style.visibility = "visible";
+		if (stopButton) {
+			stopButton.style.visibility = "visible";
+		}
 
     var tabSwitchInterval = 0;
     try {
