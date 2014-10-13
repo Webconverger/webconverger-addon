@@ -80,6 +80,21 @@ function BrowserLoadURL(aTriggeringEvent, aPostData) { // override browser.js
 			CustomizableUI.removeWidgetFromArea("print-button");
 		}
 		window.removeEventListener("load", startup, false);
+    var insertAfter = document.getElementById("alltabs-button");
+//    var insertAfter = document.getElementById("titlebar-placeholder-on-TabsToolbar-for-captions-buttons");
+//    var insertAfter = document.getElementsByAttribute("class", "private-browsing-indicator")[0];
+    document.getElementById("alltabs-button");
+    var allTabsButton = document.getElementById("alltabs-button");
+    var spacer = document.createElement("spacer");
+    spacer.setAttribute("flex", "1");
+    insertAfter.parentNode.appendChild(spacer);
+    var box = document.createElement("box");
+    box.setAttribute("pack", "center");
+    box.setAttribute("align", "center");
+    var image = document.createElement("image");
+    image.setAttribute("src", "chrome://webconverger/content/webclogo.png");
+    box.appendChild(image);
+    insertAfter.parentNode.appendChild(box);
 	}
 
 	function shutdown() {
