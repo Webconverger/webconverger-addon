@@ -93,6 +93,7 @@ function BrowserLoadURL(aTriggeringEvent, aPostData) { // override browser.js
     box.setAttribute("align", "center");
     var image = document.createElement("image");
     image.setAttribute("src", "chrome://webconverger/content/webclogo.png");
+    image.setAttribute("tooltiptext", "Webconverger");
     box.appendChild(image);
     insertAfter.parentNode.appendChild(box);
 	}
