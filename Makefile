@@ -1,4 +1,4 @@
-SRC := webcnoaddressbar webconverger webcfullscreen
+SRC := webcnoaddressbar webconverger webcfullscreen neon
 
 all: ${SRC}
 
@@ -6,12 +6,15 @@ ${SRC}:
 	cp src/$@.css content/wc.css
 	cp src/$@.xul content/wc.xul
 	cp src/$@.js content/wc.js
+	cp src/$@-netError.xhtml content/netError.xhtml
+	@mkdir -p defaults/preferences/
+	cp src/$@-prefs.js defaults/preferences/prefs.js
 	@mkdir -p extensions
 	rsync -art chrome.manifest content install.rdf defaults components extensions/$@
 	zip -r $@.xpi chrome.manifest content install.rdf defaults components
 
 clean:
-	rm -rf *.xpi content/wc.css content/wc.xul content/wc.js
+	rm -rf *.xpi content/wc.css content/wc.xul content/wc.js defaults/ content/netError.xhtml
 	rm -rf extensions
 
 deploy:
