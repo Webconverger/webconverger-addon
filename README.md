@@ -29,6 +29,7 @@ Copy preferences to `/usr/lib/firefox/browser/defaults/preferences/webc.js`.
 # Webconverger preferences
 
 * extensions.webconverger.showprintbutton - boolean
+* extensions.webconverger.nobrand - boolean, see [new logo blog](http://webconverger.org/blog/2014/New_logo/)
 * extensions.webconverger.whitelist - comma separated domains see https://github.com/Webconverger/webconverger-addon/pull/25
 * extensions.webconverger.tabswitchinterval - seconds between switching tabs (TODO: integrate with Neon)
 

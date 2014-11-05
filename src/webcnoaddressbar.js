@@ -11,6 +11,12 @@
 			document.getElementById("wc-print").removeAttribute("hidden");
 		}
 		window.removeEventListener("load", startup, false);
+
+		var nobrand = false;
+		try {
+			nobrand = Services.prefs.getBoolPref("extensions.webconverger.nobrand");
+		} catch(e) {}
+		if (!nobrand) {
 		var insertAfter = document.getElementById("alltabs-button");
 		document.getElementById("alltabs-button");
 		var allTabsButton = document.getElementById("alltabs-button");
@@ -25,6 +31,7 @@
 		image.setAttribute("tooltiptext", "Webconverger");
 		box.appendChild(image);
 		insertAfter.parentNode.appendChild(box);
+		}
 	}
 
 	function shutdown() {

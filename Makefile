@@ -10,7 +10,7 @@ ${SRC}:
 	@mkdir -p defaults/preferences/
 	cp src/$@-prefs.js defaults/preferences/prefs.js
 	@mkdir -p extensions
-	rsync -art chrome.manifest content install.rdf defaults components extensions/$@
+	rsync -art chrome.manifest modules content install.rdf defaults components extensions/$@
 	zip -r $@.xpi chrome.manifest content install.rdf defaults components
 
 clean:
@@ -18,7 +18,7 @@ clean:
 	rm -rf extensions
 
 deploy:
-	rsync -art extensions/ /home/hendry/debian/sid-root/root/webconverger/chroot/etc/webc/extensions
+	sudo rsync --delete -art extensions/* /home/hendry/debian/sid-root/root/webconverger/chroot/etc/webc/extensions/
 
 test: all
 	rm -rf ~/.mozilla
