@@ -4,6 +4,8 @@ const Cc = Components.classes;
 const Ci = Components.interfaces;
 const Cr = Components.results;
 
+Components.utils.import("resource://gre/modules/Services.jsm");
+
 const gPrefService = Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService);
 const gPrefBranch = gPrefService.getBranch(null).QueryInterface(Ci.nsIPrefBranch2);
 const idleService = Cc["@mozilla.org/widget/idleservice;1"].getService(Ci.nsIIdleService)
