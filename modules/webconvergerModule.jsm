@@ -26,3 +26,21 @@ try {
   }
 } catch (ex) {}
 
+var HTTPObserver = {
+  observe: function observe(subject, topic, data) {
+    switch (topic) {
+    case "http-on-modify-request":
+      var httpChannel = subject.QueryInterface(Ci.nsIHttpChannel);
+      if (httpChannel.URI.spec.indexOf("https://www.google.com/search") == 0 &&
+        httpChannel.URI.spec.indexOf("safe=strict") == -1) {
+        httpChannel.redirectTo(Services.io.newURI(httpChannel.URI.spec + "&safe=strict", null, null));
+      }
+    }
+  }
+}
+
+try {
+  if (gPrefBranch.getBoolPref("extensions.webconverger.forcesafesearch")) {
+    Services.obs.addObserver(HTTPObserver, "http-on-modify-request", false);
+  }
+} catch (ex) {}
