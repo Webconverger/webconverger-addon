@@ -33,9 +33,29 @@ var HTTPObserver = {
     switch (topic) {
     case "http-on-modify-request":
       var httpChannel = subject.QueryInterface(Ci.nsIHttpChannel);
-      if (httpChannel.URI.spec.indexOf("https://www.google.com/search") == 0 &&
-        httpChannel.URI.spec.indexOf("safe=strict") == -1) {
-        httpChannel.redirectTo(Services.io.newURI(httpChannel.URI.spec + "&safe=strict", null, null));
+      if (/.*\.google\..*/.test(httpChannel.URI.host)) {
+        if (/^(\/custom|\/search|\/images\/complete)/.test(httpChannel.URI.path)) {
+          if (httpChannel.URI.spec.indexOf("safe=strict") == -1) {
+            httpChannel.redirectTo(Services.io.newURI(httpChannel.URI.spec + "&safe=strict", null, null));
+          }
+        }
+        return;
+      }
+      if (/.*\.yahoo\..*/.test(httpChannel.URI.host)) {
+        if (/^(\/search)/.test(httpChannel.URI.path)) {
+          if (httpChannel.URI.spec.indexOf("vm=r") == -1) {
+            httpChannel.redirectTo(Services.io.newURI(httpChannel.URI.spec + "'&vm=r", null, null));
+          }
+        }
+        return;
+      }
+      if (/.*\.bing\..*/.test(httpChannel.URI.host)) {
+        if (/^(\/search|\/videos|\/images|\/news)/.test(httpChannel.URI.path)) {
+          if (httpChannel.URI.spec.indexOf("adlt=strict") == -1) {
+            httpChannel.redirectTo(Services.io.newURI(httpChannel.URI.spec + "'&adlt=strict", null, null));
+          }
+        }
+        return;
       }
     }
   }
