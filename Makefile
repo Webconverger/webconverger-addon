@@ -11,7 +11,7 @@ ${SRC}:
 	cp src/$@-prefs.js defaults/preferences/prefs.js
 	@mkdir -p extensions
 	rsync -art chrome.manifest modules content install.rdf defaults components extensions/$@
-	zip -r $@.xpi chrome.manifest content install.rdf defaults components
+	zip -r $@.xpi chrome.manifest content install.rdf defaults components modules
 
 clean:
 	rm -rf *.xpi content/wc.css content/wc.xul content/wc.js defaults/ content/netError.xhtml
