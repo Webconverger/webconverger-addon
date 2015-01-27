@@ -41,19 +41,25 @@ var HTTPObserver = {
         }
         return;
       }
-      if (/.*\.yahoo\..*/.test(httpChannel.URI.host)) {
+      if (/.*\.yahoo\.com/.test(httpChannel.URI.host)) {
         if (/^(\/search)/.test(httpChannel.URI.path)) {
           if (httpChannel.URI.spec.indexOf("vm=r") == -1) {
-            httpChannel.redirectTo(Services.io.newURI(httpChannel.URI.spec + "'&vm=r", null, null));
+            httpChannel.redirectTo(Services.io.newURI(httpChannel.URI.spec + "&vm=r", null, null));
           }
         }
         return;
       }
-      if (/.*\.bing\..*/.test(httpChannel.URI.host)) {
+      if (/.*\.bing\.com/.test(httpChannel.URI.host)) {
         if (/^(\/search|\/videos|\/images|\/news)/.test(httpChannel.URI.path)) {
           if (httpChannel.URI.spec.indexOf("adlt=strict") == -1) {
-            httpChannel.redirectTo(Services.io.newURI(httpChannel.URI.spec + "'&adlt=strict", null, null));
+            httpChannel.redirectTo(Services.io.newURI(httpChannel.URI.spec + "&adlt=strict", null, null));
           }
+        }
+        return;
+      }
+      if (httpChannel.URI.host == "duckduckgo.com") {
+        if (httpChannel.URI.spec.indexOf("kp=1") == -1) {
+          httpChannel.redirectTo(Services.io.newURI(httpChannel.URI.spec + "&kp=1", null, null));
         }
         return;
       }
