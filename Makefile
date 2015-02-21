@@ -6,7 +6,6 @@ ${SRC}:
 	cp src/$@.css content/wc.css
 	cp src/$@.xul content/wc.xul
 	cp src/$@.js content/wc.js
-	cp src/$@-netError.xhtml content/netError.xhtml
 	@mkdir -p defaults/preferences/
 	cp src/$@-prefs.js defaults/preferences/prefs.js
 	@mkdir -p extensions
@@ -14,7 +13,7 @@ ${SRC}:
 	zip -r $@.xpi chrome.manifest content install.rdf defaults components modules
 
 clean:
-	rm -rf *.xpi content/wc.css content/wc.xul content/wc.js defaults/ content/netError.xhtml
+	rm -rf *.xpi content/wc.css content/wc.xul content/wc.js defaults/
 	rm -rf extensions
 
 deploy:
