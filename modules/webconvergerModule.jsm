@@ -36,6 +36,14 @@ var HTTPObserver = {
         if (gProxyUsername && gProxyPassword) {
           httpChannel.setRequestHeader("Proxy-Authorization", "Basic "+ btoa(gProxyUsername + ":" + gProxyPassword), false);
         }
+        if (/.*\.youtube\.com/.test(httpChannel.URI.host)) {
+          if (/^(\/watch|\/embed)/.test(httpChannel.URI.path)) {
+            if (httpChannel.URI.spec.indexOf("html5=true") == -1) {
+              httpChannel.redirectTo(Services.io.newURI(httpChannel.URI.spec + "&html5=true", null, null));
+            }
+          }
+          return;
+        }
         if (!gForceSafeSearch) {
           return;
         }
