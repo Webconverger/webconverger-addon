@@ -48,3 +48,11 @@ When used together:
 Ensure the symlink is present:
 
 	/etc/webc/extensions/neon/content/bg.png -> /home/webc/bg.png
+
+# Debug tips
+
+Add to your `/usr/lib/firefox/browser/defaults/preferences/webc.js`:
+
+	pref("browser.dom.window.dump.enabled", true);
+
+Then in your JS, use `dump()` to print to stderr after running `firefox http://example.com` upon a terminal.
