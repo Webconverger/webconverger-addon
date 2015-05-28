@@ -1,4 +1,5 @@
 SRC := webcnoaddressbar webconverger webcfullscreen neon
+CHROOT := /home/hendry/debian/jessie-chroot/root/Debian-Live-config/webconverger/chroot
 
 all: ${SRC}
 
@@ -17,11 +18,13 @@ clean:
 	rm -rf extensions
 
 deploy:
-	sudo rsync --delete -art extensions/* /home/hendry/debian/sid-root/root/webconverger/chroot/etc/webc/extensions/
+	sudo rsync --delete -art extensions/* $(CHROOT)/etc/webc/extensions/
 
 test: all
+	cat /usr/lib/firefox/browser/defaults/preferences/webc.js
 	rm -rf ~/.mozilla
+	pkill firefox || true
 	firefox -CreateProfile default
-	firefox ./webcnoaddressbar.xpi
+	firefox ./webconverger.xpi
 
 .PHONY: clean all upload
