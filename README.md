@@ -56,3 +56,7 @@ Add to your `/usr/lib/firefox/browser/defaults/preferences/webc.js`:
 	pref("browser.dom.window.dump.enabled", true);
 
 Then in your JS, use `dump()` to print to stderr after running `firefox http://example.com` upon a terminal.
+
+# Telemetry
+
+The annoying **Choose What I Share** dialog is disabled in <https://github.com/Webconverger/webc/blob/master/opt/firefox/browser/defaults/preferences/webconverger.js>
