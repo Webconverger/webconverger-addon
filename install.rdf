@@ -4,7 +4,7 @@
 xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
 <Description about="urn:mozilla:install-manifest"
-em:id="{ee11fa88-036b-4661-bb04-d436f86bc06a}"
+em:id="kiosk@webconverger.com"
 em:name="webconverger"
 em:version="50"
 em:description="Webconverger's kiosk extension"
