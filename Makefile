@@ -17,7 +17,7 @@ clean:
 	rm -rf *.xpi content/wc.css content/wc.xul content/wc.js defaults/
 	rm -rf extensions
 
-deploy:
+deploy: all
 	sudo rsync --delete -art extensions/* $(CHROOT)/etc/webc/extensions/
 
 test: all
