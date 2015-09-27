@@ -30,7 +30,7 @@ Copy preferences to `/usr/lib/firefox/browser/defaults/preferences/webc.js`.
 # Webconverger preferences
 
 * `extensions.webconverger.showprintbutton` - boolean whether to show clickable icon to print page (alternative is ctrl+p), see <https://webconverger.org/printing/>
-* `extensions.webconverger.nobrand` - boolean, see [new logo blog](http://webconverger.org/blog/2014/New_logo/)
+* `extensions.webconverger.nobrand` - boolean, see [new logo blog](https://webconverger.org/blog/2014/New_logo/)
 * `extensions.webconverger.whitelist` - comma separated domains see https://github.com/Webconverger/webconverger-addon/pull/25 for details
 * `extensions.webconverger.tabswitchinterval` - seconds between switching tabs (TODO: integrate with Neon)
 * `extensions.webconverger.kioskresetstation` - **UNUSED** re-implementation of <https://github.com/Webconverger/webc/blob/master/usr/bin/kioskresetstation>

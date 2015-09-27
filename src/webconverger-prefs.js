@@ -1,4 +1,4 @@
-// http://webconverger.org/kiosk/
+// https://webconverger.org/kiosk/
 
 pref("devtools.errorconsole.enabled", false);
 
