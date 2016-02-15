@@ -123,6 +123,7 @@ function BrowserLoadURL(aTriggeringEvent, aPostData) { // override browser.js
 			init: function() {}
 		};
 		CustomizableUI.destroyWidget("social-share-button");
+		CustomizableUI.destroyWidget("pocket-button");
 	}
 
 	function shutdown() {
