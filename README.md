@@ -12,6 +12,11 @@ Used in "Enterprise" deployments, schools, libraries, signs, shops and banks!
 
 <https://webconverger.org/kiosk/> shows how it is used in the Webconverger Linux distribution.
 
+For developing you might need to set `xpinstall.signatures.required` to **false**, like so:
+
+	cat /usr/lib/firefox/browser/defaults/preferences/webc.js
+	pref("xpinstall.signatures.required", false);
+
 # Security
 
 Found a way to circumvent the extension? [Please let us know](https://webconverger.org/security/)!
@@ -35,7 +40,7 @@ Copy preferences to `/usr/lib/firefox/browser/defaults/preferences/webc.js`.
 * `extensions.webconverger.tabswitchinterval` - seconds between switching tabs (TODO: integrate with Neon)
 * `extensions.webconverger.kioskresetstation` - **UNUSED** re-implementation of <https://github.com/Webconverger/webc/blob/master/usr/bin/kioskresetstation>
 * `extensions.webconverger.forcesafesearch` - boolean to force searches to be safe, basically avoiding the case whereby someone searches for "boobs" on Image search
-
+* `extensions.webconverger.themeURL`, for example: `pref("extensions.webconverger.themeURL", "http://s.natalian.org.s3.amazonaws.com/2016-06-06/persona.json");`
 ### Basic Proxy authentication
 
 When used together:
@@ -60,3 +65,5 @@ Then in your JS, use `dump()` to print to stderr after running `firefox http://e
 # Telemetry
 
 The annoying **Choose What I Share** dialog is disabled in <https://github.com/Webconverger/webc/blob/master/opt/firefox/browser/defaults/preferences/webconverger.js>
+
+

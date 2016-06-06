@@ -21,10 +21,10 @@ deploy: all
 	sudo rsync --delete -art extensions/* $(CHROOT)/etc/webc/extensions/
 
 test: all
-	cat /usr/lib/firefox/browser/defaults/preferences/webc.js
+	cat /usr/lib/firefox/browser/defaults/preferences/webc.js || true
 	rm -rf ~/.mozilla
 	pkill firefox || true
 	firefox -CreateProfile default
-	firefox ./webconverger.xpi
+	firefox -console ./webconverger.xpi
 
 .PHONY: clean all upload

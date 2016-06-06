@@ -124,6 +124,24 @@ function BrowserLoadURL(aTriggeringEvent, aPostData) { // override browser.js
 		};
 		CustomizableUI.destroyWidget("social-share-button");
 		CustomizableUI.destroyWidget("pocket-button");
+
+		try {
+		themeURL = Services.prefs.getCharPref("extensions.webconverger.themeURL");
+		if (themeURL) {
+		fetch(themeURL, { method: "GET" })
+			.then(function(response) {
+				return response.json()
+			}).then(function(json) {
+				console.log('parsed json', json)
+				var temp = {};
+				Components.utils.import("resource://gre/modules/LightweightThemeManager.jsm", temp);
+				temp.LightweightThemeManager.currentTheme = json;
+			}).catch(function(ex) {
+				console.log('parsing failed', ex)
+			});
+		}
+		} catch(e) { console.log("Issue setting the theme", e); }
+
 	}
 
 	function shutdown() {
