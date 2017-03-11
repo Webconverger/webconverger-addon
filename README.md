@@ -1,12 +1,13 @@
 # Webconverger addon for Firefox
 
-Curated by [Mike Kaply](http://consulting.kaply.com/)
-[@mikekaply](http://twitter.com/MikeKaply)
+This **addon is not signed**! You have to go to about:config and set
+xpinstall.signatures.required to false. This might be only possible on the
+developer and ESR versions.
 
 The common idea is to limit the Firefox browser to functions for kiosk style
 (non-personal) browsing. Limit most Firefox features to convey simplicity,
 familiarity and [principle of least
-astonishment](http://en.wikipedia.org/wiki/Principle_of_least_astonishment).
+astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment).
 
 Used in "Enterprise" deployments, schools, libraries, signs, shops and banks!
 
@@ -65,5 +66,3 @@ Then in your JS, use `dump()` to print to stderr after running `firefox http://e
 # Telemetry
 
 The annoying **Choose What I Share** dialog is disabled in <https://github.com/Webconverger/webc/blob/master/opt/firefox/browser/defaults/preferences/webconverger.js>
-
-
