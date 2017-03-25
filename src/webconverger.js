@@ -1,7 +1,71 @@
 Components.utils.import('resource:///modules/CustomizableUI.jsm')
 
+function E (id, context) {
+  var element = context.getElementById(id)
+  return element
+}
+
+function hide (element) {
+  if (element) {
+    element.setAttribute('hidden', 'true')
+  }
+}
+
+function disable (element) {
+  if (element) {
+    element.disabled = true
+    element.setAttribute('disabled', 'true')
+  }
+}
+
+function removeDeveloperTools (doc) {
+  var win = doc.defaultView
+  // Need to delay this because devtools is created dynamically
+  win.setTimeout(function () {
+    CustomizableUI.destroyWidget('developer-button')
+    hide(E('webDeveloperMenu', doc))
+    var devtoolsKeyset = doc.getElementById('devtoolsKeyset')
+    if (devtoolsKeyset) {
+      for (var i = 0; i < devtoolsKeyset.childNodes.length; i++) {
+        devtoolsKeyset.childNodes[i].removeAttribute('oncommand')
+        devtoolsKeyset.childNodes[i].removeAttribute('command')
+      }
+    }
+  }, 0)
+  try {
+    doc.getElementById('Tools:ResponsiveUI').removeAttribute('oncommand')
+  } catch (e) {}
+  try {
+    doc.getElementById('Tools:Scratchpad').removeAttribute('oncommand')
+  } catch (e) {}
+  try {
+    doc.getElementById('Tools:BrowserConsole').removeAttribute('oncommand')
+  } catch (e) {}
+  try {
+    doc.getElementById('Tools:BrowserToolbox').removeAttribute('oncommand')
+  } catch (e) {}
+  try {
+    doc.getElementById('Tools:DevAppsMgr').removeAttribute('oncommand')
+  } catch (e) {}
+  try {
+    doc.getElementById('Tools:DevToolbar').removeAttribute('oncommand')
+  } catch (e) {}
+  try {
+    doc.getElementById('Tools:DevToolbox').removeAttribute('oncommand')
+  } catch (e) {}
+  try {
+    doc.getElementById('Tools:DevToolbarFocus').removeAttribute('oncommand')
+  } catch (e) {}
+  CustomizableUI.destroyWidget('developer-button')
+}
+
 var webc = {
-  init: function () {
+  init: function (event) {
+    // Following https://github.com/mkaply/cck2wizard/blob/9968f143386dfaa2afe519ee48aa2ae730a12055/cck2/modules/CCK2BrowserOverlay.jsm#L24
+    var doc = event.target
+
+    removeDeveloperTools(doc)
+
     if (gBrowser) {
       gBrowser.tabContainer.addEventListener('TabClose', webc.tabRemoved, false)
     }
@@ -35,7 +99,7 @@ var webc = {
 
 window.addEventListener('load', function load (event) {
   window.removeEventListener('load', load, false) // remove listener, no longer needed
-  webc.init()
+  webc.init(event)
 },
 false)
 
