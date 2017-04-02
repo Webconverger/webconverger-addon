@@ -31,7 +31,7 @@ function removeDeveloperTools (doc) {
         devtoolsKeyset.childNodes[i].removeAttribute('command')
       }
     }
-  }, 0)
+  }, 500)
   try {
     doc.getElementById('Tools:ResponsiveUI').removeAttribute('oncommand')
   } catch (e) {}
